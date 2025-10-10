@@ -54,16 +54,6 @@
             box-shadow: 0 20px 40px rgba(64, 224, 208, 0.4);
         }
         
-        .sticky-nav {
-            transition: all 0.3s ease-in-out;
-        }
-        .sticky-nav.scrolled {
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
         /* Preloader */
         #preloader {
             position: fixed;
@@ -238,43 +228,45 @@
     </div>
 
     <!-- Header & Navigation -->
-    <header id="header" class="fixed top-0 left-0 right-0 z-50 sticky-nav">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#home">
-                <img src="https://re-arthconsultancy.com/wp-content/uploads/2022/02/Re-Arth-Logo-2-edited-300x200.jpg" alt="Re-Arth Consultancy Logo" class="h-12">
-            </a>
-            <!-- Desktop Nav -->
-            <nav class="hidden md:flex space-x-8 items-center">
-                <a href="#home" class="text-gray-600 hover:text-teal-500 transition">Home</a>
-                <a href="#about" class="text-gray-600 hover:text-teal-500 transition">About</a>
-                <a href="#services" class="text-gray-600 hover:text-teal-500 transition">Services</a>
-                <a href="#plans" class="text-gray-600 hover:text-teal-500 transition">Our Plans</a>
-                <a href="#calculator" class="text-gray-600 hover:text-teal-500 transition">Calculator</a>
-                <a href="#insights" class="text-gray-600 hover:text-teal-500 transition">Market Insights</a>
-                <a href="#testimonials" class="text-gray-600 hover:text-teal-500 transition">Testimonials</a>
-                <a href="#contact" class="text-gray-600 hover:text-teal-500 transition">Contact</a>
-            </nav>
-            <!-- Mobile Menu Button -->
-            <button id="mobile-menu-button" class="md:hidden text-gray-800 z-50">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path id="hamburger-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-                    <path id="close-icon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-            </button>
+    <header id="header" class="fixed group z-50 w-full px-2">
+        <div id="nav-container" class="mx-auto mt-2 max-w-6xl px-6 transition-all duration-300 lg:px-12">
+            <div class="relative flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0 lg:py-4">
+                <div class="flex w-full justify-between lg:w-auto">
+                    <a href="#home">
+                        <img src="https://re-arthconsultancy.com/wp-content/uploads/2022/02/Re-Arth-Logo-2-edited-300x200.jpg" alt="Re-Arth Consultancy Logo" class="h-12">
+                    </a>
+                    <button id="mobile-menu-button" aria-label="Open Menu" class="relative z-20 -m-2.5 -mr-4 block cursor-pointer p-2.5 lg:hidden">
+                        <svg id="hamburger-icon" class="m-auto h-6 w-6 duration-200" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
+                        <svg id="close-icon" class="hidden m-auto h-6 w-6 duration-200" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" x2="6" y1="6" y2="18"></line><line x1="6" x2="18" y1="6" y2="18"></line></svg>
+                    </button>
+                </div>
+                <div class="absolute inset-0 m-auto hidden h-fit w-fit lg:block">
+                    <ul class="flex gap-8 text-sm">
+                        <li><a href="#about" class="text-gray-600 hover:text-teal-500 transition">About</a></li>
+                        <li><a href="#services" class="text-gray-600 hover:text-teal-500 transition">Services</a></li>
+                        <li><a href="#plans" class="text-gray-600 hover:text-teal-500 transition">Our Plans</a></li>
+                        <li><a href="#insights" class="text-gray-600 hover:text-teal-500 transition">Market Insights</a></li>
+                         <li><a href="#testimonials" class="text-gray-600 hover:text-teal-500 transition">Testimonials</a></li>
+                    </ul>
+                </div>
+                <div id="mobile-menu-content" class="hidden w-full flex-wrap items-center justify-end space-y-8 rounded-3xl border border-gray-200 bg-white p-6 shadow-2xl shadow-zinc-300/20 lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none dark:shadow-none">
+                    <ul class="w-full space-y-6 text-base lg:hidden">
+                        <li><a href="#about" class="mobile-menu-link text-gray-600 hover:text-teal-500 transition">About</a></li>
+                        <li><a href="#services" class="mobile-menu-link text-gray-600 hover:text-teal-500 transition">Services</a></li>
+                        <li><a href="#plans" class="mobile-menu-link text-gray-600 hover:text-teal-500 transition">Our Plans</a></li>
+                        <li><a href="#insights" class="mobile-menu-link text-gray-600 hover:text-teal-500 transition">Market Insights</a></li>
+                        <li><a href="#testimonials" class="mobile-menu-link text-gray-600 hover:text-teal-500 transition">Testimonials</a></li>
+                        <li><a href="#contact" class="mobile-menu-link text-gray-600 hover:text-teal-500 transition">Contact</a></li>
+                    </ul>
+                    <div class="flex w-full flex-col sm:w-fit">
+                         <a href="#contact" class="w-full text-center bg-teal-500 text-white font-semibold py-2 px-6 rounded-lg shadow-lg hover:bg-teal-600 transition">
+                            Book Consultation
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
-
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden fixed inset-0 bg-white z-40 flex flex-col items-center justify-center space-y-8 text-2xl">
-        <a href="#home" class="mobile-menu-link text-gray-800 hover:text-teal-500 transition">Home</a>
-        <a href="#about" class="mobile-menu-link text-gray-800 hover:text-teal-500 transition">About</a>
-        <a href="#services" class="mobile-menu-link text-gray-800 hover:text-teal-500 transition">Services</a>
-        <a href="#plans" class="mobile-menu-link text-gray-800 hover:text-teal-500 transition">Our Plans</a>
-        <a href="#calculator" class="mobile-menu-link text-gray-800 hover:text-teal-500 transition">Calculator</a>
-        <a href="#insights" class="mobile-menu-link text-gray-800 hover:text-teal-500 transition">Market Insights</a>
-        <a href="#testimonials" class="mobile-menu-link text-gray-800 hover:text-teal-500 transition">Testimonials</a>
-        <a href="#contact" class="mobile-menu-link text-gray-800 hover:text-teal-500 transition">Contact</a>
-    </div>
 
     <!-- Hero Section -->
     <section id="home" class="hero-bg min-h-screen flex items-center pt-24 md:pt-20">
@@ -868,14 +860,18 @@
             }
 
             // Sticky Navigation
-            const header = document.getElementById('header');
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 50) {
-                    header.classList.add('scrolled');
-                } else {
-                    header.classList.remove('scrolled');
-                }
-            });
+            const navContainer = document.getElementById('nav-container');
+            if (navContainer) {
+                 window.addEventListener('scroll', () => {
+                    if (window.scrollY > 50) {
+                        navContainer.classList.add('bg-white/50', 'max-w-4xl', 'rounded-2xl', 'border', 'border-gray-200', 'backdrop-blur-lg', 'shadow-md');
+                        navContainer.classList.remove('max-w-6xl');
+                    } else {
+                        navContainer.classList.remove('bg-white/50', 'max-w-4xl', 'rounded-2xl', 'border', 'border-gray-200', 'backdrop-blur-lg', 'shadow-md');
+                        navContainer.classList.add('max-w-6xl');
+                    }
+                });
+            }
 
             // Intersection Observer for reveal animations
             const revealElements = document.querySelectorAll('.reveal');
@@ -936,7 +932,6 @@
                 }
             };
             scrollTopBtn.addEventListener('click', () => {
-                // Use our custom scroll function for consistency
                 const homeElement = document.querySelector('#home');
                 if (homeElement) {
                     window.scrollTo({
@@ -946,20 +941,23 @@
                 }
             });
 
-            // Mobile Menu Logic & Smooth Scrolling
+            // Corrected Mobile Menu Logic
             const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileMenuContent = document.getElementById('mobile-menu-content');
             const hamburgerIcon = document.getElementById('hamburger-icon');
             const closeIcon = document.getElementById('close-icon');
 
             const toggleMenu = () => {
-                mobileMenu.classList.toggle('hidden');
-                document.body.classList.toggle('overflow-hidden');
-                hamburgerIcon.classList.toggle('hidden');
-                closeIcon.classList.toggle('hidden');
+                if(mobileMenuContent && hamburgerIcon && closeIcon) {
+                    mobileMenuContent.classList.toggle('hidden');
+                    hamburgerIcon.classList.toggle('hidden');
+                    closeIcon.classList.toggle('hidden');
+                }
             };
 
-            mobileMenuButton.addEventListener('click', toggleMenu);
+            if(mobileMenuButton) {
+                mobileMenuButton.addEventListener('click', toggleMenu);
+            }
 
             // Smooth scrolling for all anchor links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -971,11 +969,12 @@
                         e.preventDefault();
 
                         // Close mobile menu if it's open
-                        if (!mobileMenu.classList.contains('hidden')) {
-                            toggleMenu();
+                        if (mobileMenuContent && !mobileMenuContent.classList.contains('hidden')) {
+                           toggleMenu();
                         }
                         
-                        const headerOffset = document.getElementById('header').offsetHeight;
+                        const header = document.getElementById('header');
+                        const headerOffset = header ? header.offsetHeight : 0;
                         const elementPosition = targetElement.offsetTop;
                         const offsetPosition = elementPosition - headerOffset;
 
@@ -1089,7 +1088,7 @@
                 **Reasoning:** [A concise, 2-3 sentence explanation of why this plan is a good fit for the client. Be encouraging and professional.]`;
 
                 try {
-                    const apiKey = ""; // API key is handled by the environment
+                    const apiKey = "AIzaSyDxRr-wlJG8skgMp_Kkrgaj-ajnSsQaS90"; // API key is handled by the environment
                     const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
 
                     const response = await fetch(apiUrl, {
@@ -1137,7 +1136,7 @@
                 const prompt = "Act as a financial analyst for the Indian market. Provide a brief, easy-to-understand market snapshot for today. Your audience is potential investors who are not experts. Include: 1. A quick summary of NIFTY 50 and BSE SENSEX performance. 2. Mention one or two sectors that are currently in focus (e.g., IT, banking, auto). 3. A concluding sentence on the general investor sentiment (e.g., cautious, optimistic). Keep the entire response to a single, concise paragraph and make it engaging.";
 
                 try {
-                    const apiKey = ""; // API key is handled by the environment
+                    const apiKey = "AIzaSyDxRr-wlJG8skgMp_Kkrgaj-ajnSsQaS90"; // API key is handled by the environment
                     const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
                     
                     const payload = {
