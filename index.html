@@ -224,45 +224,61 @@
 
     <!-- Preloader -->
     <div id="preloader">
-        <img src="https://re-arthconsultancy.com/wp-content/uploads/2022/02/Re-Arth-Logo-2-edited-300x200.jpg" alt="Re-Arth Consultancy Logo" class="h-20 animate-pulse">
+        <img src="https://i.ibb.co/3YNPrM1T/image.png" alt="Re-Arth Consultancy Logo" class="h-20 animate-pulse">
     </div>
 
     <!-- Header & Navigation -->
     <header id="header" class="fixed group z-50 w-full px-2">
         <div id="nav-container" class="mx-auto mt-2 max-w-6xl px-6 transition-all duration-300 lg:px-12">
-            <div class="relative flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0 lg:py-4">
-                <div class="flex w-full justify-between lg:w-auto">
+            <div class="relative flex items-center justify-between py-3 lg:py-4">
+                <!-- Logo -->
+                <div class="relative z-20 flex-shrink-0">
                     <a href="#home">
-                        <img src="https://re-arthconsultancy.com/wp-content/uploads/2022/02/Re-Arth-Logo-2-edited-300x200.jpg" alt="Re-Arth Consultancy Logo" class="h-12">
+                        <img src="https://i.ibb.co/3YNPrM1T/image.png" alt="Re-Arth Consultancy Logo" class="h-12">
                     </a>
-                    <button id="mobile-menu-button" aria-label="Open Menu" class="relative z-20 -m-2.5 -mr-4 block cursor-pointer p-2.5 lg:hidden">
-                        <svg id="hamburger-icon" class="m-auto h-6 w-6 duration-200" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
-                        <svg id="close-icon" class="hidden m-auto h-6 w-6 duration-200" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" x2="6" y1="6" y2="18"></line><line x1="6" x2="18" y1="6" y2="18"></line></svg>
-                    </button>
                 </div>
-                <div class="absolute inset-0 m-auto hidden h-fit w-fit lg:block">
+
+                <!-- Desktop Menu (Center) -->
+                <div class="hidden lg:flex lg:flex-1 lg:justify-center">
                     <ul class="flex gap-8 text-sm">
                         <li><a href="#about" class="text-gray-600 hover:text-teal-500 transition">About</a></li>
                         <li><a href="#services" class="text-gray-600 hover:text-teal-500 transition">Services</a></li>
                         <li><a href="#plans" class="text-gray-600 hover:text-teal-500 transition">Our Plans</a></li>
                         <li><a href="#insights" class="text-gray-600 hover:text-teal-500 transition">Market Insights</a></li>
-                         <li><a href="#testimonials" class="text-gray-600 hover:text-teal-500 transition">Testimonials</a></li>
+                        <li><a href="#testimonials" class="text-gray-600 hover:text-teal-500 transition">Testimonials</a></li>
                     </ul>
                 </div>
-                <div id="mobile-menu-content" class="hidden w-full flex-wrap items-center justify-end space-y-8 rounded-3xl border border-gray-200 bg-white p-6 shadow-2xl shadow-zinc-300/20 lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none dark:shadow-none">
-                    <ul class="w-full space-y-6 text-base lg:hidden">
-                        <li><a href="#about" class="mobile-menu-link text-gray-600 hover:text-teal-500 transition">About</a></li>
-                        <li><a href="#services" class="mobile-menu-link text-gray-600 hover:text-teal-500 transition">Services</a></li>
-                        <li><a href="#plans" class="mobile-menu-link text-gray-600 hover:text-teal-500 transition">Our Plans</a></li>
-                        <li><a href="#insights" class="mobile-menu-link text-gray-600 hover:text-teal-500 transition">Market Insights</a></li>
-                        <li><a href="#testimonials" class="mobile-menu-link text-gray-600 hover:text-teal-500 transition">Testimonials</a></li>
-                        <li><a href="#contact" class="mobile-menu-link text-gray-600 hover:text-teal-500 transition">Contact</a></li>
-                    </ul>
-                    <div class="flex w-full flex-col sm:w-fit">
-                         <a href="#contact" class="w-full text-center bg-teal-500 text-white font-semibold py-2 px-6 rounded-lg shadow-lg hover:bg-teal-600 transition">
-                            Book Consultation
-                        </a>
-                    </div>
+
+                <!-- Desktop CTA Button (Right) -->
+                <div class="hidden lg:flex items-center flex-shrink-0">
+                    <a href="#contact" class="text-center bg-teal-500 text-white font-semibold py-2 px-6 rounded-lg shadow-lg hover:bg-teal-600 transition">
+                        Book Consultation
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-button" aria-label="Open Menu" class="relative z-20 p-2.5">
+                        <svg id="hamburger-icon" class="m-auto h-6 w-6 duration-200" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
+                        <svg id="close-icon" class="hidden m-auto h-6 w-6 duration-200" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" x2="6" y1="6" y2="18"></line><line x1="6" x2="18" y1="6" y2="18"></line></svg>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu Dropdown -->
+            <div id="mobile-menu-content" class="hidden lg:hidden rounded-3xl border border-gray-200 bg-white p-6 shadow-2xl shadow-zinc-300/20">
+                <ul class="w-full space-y-6 text-base">
+                    <li><a href="#about" class="mobile-menu-link text-gray-600 hover:text-teal-500 transition">About</a></li>
+                    <li><a href="#services" class="mobile-menu-link text-gray-600 hover:text-teal-500 transition">Services</a></li>
+                    <li><a href="#plans" class="mobile-menu-link text-gray-600 hover:text-teal-500 transition">Our Plans</a></li>
+                    <li><a href="#insights" class="mobile-menu-link text-gray-600 hover:text-teal-500 transition">Market Insights</a></li>
+                    <li><a href="#testimonials" class="mobile-menu-link text-gray-600 hover:text-teal-500 transition">Testimonials</a></li>
+                    <li><a href="#contact" class="mobile-menu-link text-gray-600 hover:text-teal-500 transition">Contact</a></li>
+                </ul>
+                <div class="flex w-full flex-col mt-6">
+                     <a href="#contact" class="w-full text-center bg-teal-500 text-white font-semibold py-2 px-6 rounded-lg shadow-lg hover:bg-teal-600 transition">
+                        Book Consultation
+                    </a>
                 </div>
             </div>
         </div>
@@ -577,62 +593,6 @@
         </div>
     </section>
 
-    <!-- Investment Calculator Section -->
-    <section id="calculator" class="py-20 gradient-bg">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 reveal">Simple Return Calculator</h2>
-                <p class="text-gray-600 max-w-3xl mx-auto reveal" style="transition-delay: 0.2s;">This tool calculates returns based on a fixed monthly interest rate on your principal amount. It shows your potential monthly earnings, the total return over the investment period, and the final amount you'll receive.</p>
-            </div>
-            <div class="glassmorphism rounded-3xl p-8 md:p-12">
-                <div class="grid md:grid-cols-5 gap-8 md:gap-12 items-center">
-                    <!-- Left side: Sliders/Inputs -->
-                    <div class="md:col-span-3 space-y-8 reveal">
-                        <!-- Investment Amount Slider -->
-                        <div>
-                            <div class="flex justify-between items-center mb-2">
-                                <label for="investment-slider" class="font-semibold text-gray-700">Investment Amount (₹)</label>
-                                <input type="text" id="investment-input" class="font-bold text-lg text-teal-600 bg-transparent text-right border-0 focus:outline-none focus:ring-2 focus:ring-teal-200 rounded-md p-1 w-48">
-                            </div>
-                            <input type="range" min="10000" max="10000000" value="100000" step="10000" id="investment-slider" class="slider-track w-full">
-                        </div>
-                        <!-- Return Rate Slider -->
-                        <div>
-                            <div class="flex justify-between items-center mb-2">
-                                <label for="return-slider" class="font-semibold text-gray-700">Monthly Interest Rate (%)</label>
-                                <input type="text" id="return-input" class="font-bold text-lg text-teal-600 bg-transparent text-right border-0 focus:outline-none focus:ring-2 focus:ring-teal-200 rounded-md p-1 w-24">
-                            </div>
-                            <input type="range" min="1" max="20" value="10" step="0.5" id="return-slider" class="slider-track w-full">
-                        </div>
-                        <!-- Time Period Slider -->
-                        <div>
-                            <div class="flex justify-between items-center mb-2">
-                                <label for="time-slider" class="font-semibold text-gray-700">Investment Duration (Months)</label>
-                                <input type="text" id="time-input" class="font-bold text-lg text-teal-600 bg-transparent text-right border-0 focus:outline-none focus:ring-2 focus:ring-teal-200 rounded-md p-1 w-32">
-                            </div>
-                            <input type="range" min="1" max="60" value="12" id="time-slider" class="slider-track w-full">
-                        </div>
-                    </div>
-                    <!-- Right side: Results -->
-                    <div class="md:col-span-2 space-y-6 text-center md:text-left reveal" style="transition-delay: 0.3s;">
-                        <div>
-                            <p class="text-gray-600 mb-1">Monthly Return</p>
-                            <h3 id="monthly-return" class="text-3xl font-bold text-gray-800 transition-all duration-300">₹0</h3>
-                        </div>
-                        <div>
-                            <p class="text-gray-600 mb-1">Total Return</p>
-                            <h3 id="total-return" class="text-3xl font-bold text-gray-800 transition-all duration-300">₹0</h3>
-                        </div>
-                        <div class="mt-4 pt-4 border-t border-teal-200">
-                            <p class="text-gray-600 mb-1">Total Amount <span class="text-sm">(Principal + Return)</span></p>
-                            <h3 id="total-amount" class="text-4xl md:text-5xl font-bold text-teal-600 transition-all duration-300">₹0</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Why Choose Us Section -->
     <section id="why-choose-us" class="py-20 bg-white">
         <div class="container mx-auto px-6">
@@ -793,7 +753,7 @@
     <footer class="bg-gray-800 text-white py-12">
         <div class="container mx-auto px-6 text-center">
             <a href="#home">
-                <img src="https://re-arthconsultancy.com/wp-content/uploads/2022/02/Re-Arth-Logo-2-edited-300x200.jpg" alt="Re-Arth Consultancy Logo" class="h-16 mx-auto mb-6">
+                <img src="https://i.ibb.co/3YNPrM1T/image.png" alt="Re-Arth Consultancy Logo" class="h-16 mx-auto mb-6">
             </a>
             <nav class="flex justify-center flex-wrap space-x-6 my-6">
                 <a href="#home" class="hover:text-teal-400 transition">Home</a>
@@ -1092,7 +1052,7 @@
                 **Reasoning:** [A concise, 2-3 sentence explanation of why this plan is a good fit for the client. Be encouraging and professional.]`;
 
                 try {
-                    const apiKey = "AIzaSyDxRr-wlJG8skgMp_Kkrgaj-ajnSsQaS90"; // API key is handled by the environment
+                    const apiKey = "AIzaSyDxRr-wlJG8skgMp_Kkrgaj-ajnSsQaS90"; 
                     const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
 
                     const response = await fetch(apiUrl, {
@@ -1140,7 +1100,7 @@
                 const prompt = "Act as a financial analyst for the Indian market. Provide a brief, easy-to-understand market snapshot for today. Your audience is potential investors who are not experts. Include: 1. A quick summary of NIFTY 50 and BSE SENSEX performance. 2. Mention one or two sectors that are currently in focus (e.g., IT, banking, auto). 3. A concluding sentence on the general investor sentiment (e.g., cautious, optimistic). Keep the entire response to a single, concise paragraph and make it engaging.";
 
                 try {
-                    const apiKey = "AIzaSyDxRr-wlJG8skgMp_Kkrgaj-ajnSsQaS90"; // API key is handled by the environment
+                    const apiKey = "AIzaSyDxRr-wlJG8skgMp_Kkrgaj-ajnSsQaS90"; 
                     const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
                     
                     const payload = {
@@ -1176,114 +1136,9 @@
             });
 
 
-            // Investment Calculator Logic
-            const investmentSlider = document.getElementById('investment-slider');
-            const returnSlider = document.getElementById('return-slider');
-            const timeSlider = document.getElementById('time-slider');
-            
-            const investmentInput = document.getElementById('investment-input');
-            const returnInput = document.getElementById('return-input');
-            const timeInput = document.getElementById('time-input');
-            
-            const monthlyReturnDisplay = document.getElementById('monthly-return');
-            const totalReturnDisplay = document.getElementById('total-return');
-            const totalAmountDisplay = document.getElementById('total-amount');
-
-            const formatCurrency = (num) => {
-                return new Intl.NumberFormat('en-IN', {
-                    style: 'currency',
-                    currency: 'INR',
-                    minimumFractionDigits: 0,
-                    maximumFractionDigits: 0,
-                }).format(num);
-            };
-
-             const parseValue = (str) => {
-                return parseFloat(str.replace(/[^0-9.]/g, '')) || 0;
-            };
-            
-            let currentTotalAmount = 0;
-
-            const calculateAndDisplay = () => {
-                const investment = parseFloat(investmentSlider.value);
-                const monthlyRate = parseFloat(returnSlider.value) / 100;
-                const duration = parseInt(timeSlider.value);
-
-                const monthlyReturn = investment * monthlyRate;
-                const totalReturn = monthlyReturn * duration;
-                const totalAmount = investment + totalReturn;
-                
-                investmentInput.value = formatCurrency(investment);
-                returnInput.value = `${returnSlider.value}%`;
-                timeInput.value = `${duration} Month${duration > 1 ? 's' : ''}`;
-
-                // Animate counter
-                const animateValue = (element, start, end, duration) => {
-                    let startTimestamp = null;
-                    const step = (timestamp) => {
-                        if (!startTimestamp) startTimestamp = timestamp;
-                        const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-                        const currentValue = Math.floor(progress * (end - start) + start);
-                        element.innerText = formatCurrency(currentValue);
-                        if (progress < 1) {
-                            window.requestAnimationFrame(step);
-                        } else {
-                            element.innerText = formatCurrency(end); // Ensure it ends on the exact value
-                        }
-                    };
-                    window.requestAnimationFrame(step);
-                };
-                
-                // Animate only the final total amount for a cleaner effect
-                animateValue(totalAmountDisplay, parseValue(totalAmountDisplay.innerText), totalAmount, 500);
-                
-                // Update other fields directly
-                monthlyReturnDisplay.innerText = formatCurrency(monthlyReturn);
-                totalReturnDisplay.innerText = formatCurrency(totalReturn);
-            };
-
-            const syncInputToSlider = (input, slider) => {
-                let value = parseValue(input.value);
-                const min = parseFloat(slider.min);
-                const max = parseFloat(slider.max);
-
-                if (value < min) value = min;
-                if (value > max) value = max;
-                
-                slider.value = value;
-                calculateAndDisplay();
-            };
-
-            // Event listeners for sliders
-            [investmentSlider, returnSlider, timeSlider].forEach(slider => {
-                slider.addEventListener('input', calculateAndDisplay);
-            });
-
-            // Event listeners for inputs
-            investmentInput.addEventListener('blur', () => syncInputToSlider(investmentInput, investmentSlider));
-            returnInput.addEventListener('blur', () => syncInputToSlider(returnInput, returnSlider));
-            timeInput.addEventListener('blur', () => syncInputToSlider(timeInput, timeSlider));
-
-            [investmentInput, returnInput, timeInput].forEach(input => {
-                input.addEventListener('keydown', (e) => {
-                    if (e.key === 'Enter') {
-                        e.target.blur();
-                    }
-                });
-                // When user focuses, show the raw number for editing
-                input.addEventListener('focus', (e) => {
-                    e.target.value = parseValue(e.target.value);
-                });
-            });
-
-
-            // Initial calculation
-            calculateAndDisplay();
         });
 
     </script>
 </body>
 </html>
-"
-remove calculator section
 
