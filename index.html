@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <style>
         body {
             font-family: 'Poppins', sans-serif;
@@ -27,24 +28,9 @@
              background: linear-gradient(135deg, #40E0D0 0%, #15a191 100%);
         }
         .hero-bg {
-            background: linear-gradient(135deg, #b2f5ea, #e0f7fa);
+            background: linear-gradient(135deg, #e0f7fa, #ffffff);
             position: relative;
             overflow: hidden;
-        }
-        .floating-shape {
-            position: absolute;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 50%;
-            animation: float 15s infinite ease-in-out;
-        }
-        .floating-shape-1 { width: 150px; height: 150px; top: 10%; left: 5%; animation-duration: 18s; }
-        .floating-shape-2 { width: 80px; height: 80px; top: 25%; left: 80%; animation-duration: 12s; }
-        .floating-shape-3 { width: 120px; height: 120px; bottom: 15%; left: 60%; animation-duration: 20s; }
-        .floating-shape-4 { width: 60px; height: 60px; bottom: 5%; left: 20%; animation-duration: 10s; }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-30px) rotate(180deg); }
         }
 
         .scroll-down-arrow {
@@ -63,21 +49,11 @@
             }
         }
         
-        .plan-card-popular {
+        .plan-card-popular .electric-border {
             transform: scale(1.05);
             box-shadow: 0 20px 40px rgba(64, 224, 208, 0.4);
         }
         
-        .sticky-nav {
-            transition: all 0.3s ease-in-out;
-        }
-        .sticky-nav.scrolled {
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
         /* Preloader */
         #preloader {
             position: fixed;
@@ -172,6 +148,76 @@
             border: 4px solid white;
             box-shadow: 0 0 5px rgba(0,0,0,0.2);
         }
+
+        /* Electric Border Styles */
+        .electric-border {
+            --electric-light-color: oklch(from var(--electric-border-color) l c h);
+            --eb-border-width: 2px;
+            position: relative;
+            border-radius: inherit;
+            overflow: visible;
+            isolation: isolate;
+        }
+
+        .eb-svg {
+            position: fixed;
+            left: -10000px;
+            top: -10000px;
+            width: 10px;
+            height: 10px;
+            opacity: 0.001;
+            pointer-events: none;
+        }
+
+        .eb-content {
+            position: relative;
+            border-radius: inherit;
+            z-index: 1;
+        }
+
+        .eb-layers {
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        .eb-stroke,
+        .eb-glow-1,
+        .eb-glow-2,
+        .eb-background-glow {
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            pointer-events: none;
+            box-sizing: border-box;
+        }
+
+        .eb-stroke {
+            border: var(--eb-border-width) solid var(--electric-border-color);
+        }
+
+        .eb-glow-1 {
+            border: var(--eb-border-width) solid oklch(from var(--electric-border-color) l c h / 0.6);
+            opacity: 0.5;
+            filter: blur(calc(0.5px + (var(--eb-border-width) * 0.25)));
+        }
+
+        .eb-glow-2 {
+            border: var(--eb-border-width) solid var(--electric-light-color);
+            opacity: 0.5;
+            filter: blur(calc(2px + (var(--eb-border-width) * 0.5)));
+        }
+
+        .eb-background-glow {
+            z-index: -1;
+            transform: scale(1.08);
+            filter: blur(32px);
+            opacity: 0.3;
+            background: linear-gradient(-30deg, var(--electric-light-color), transparent, var(--electric-border-color));
+        }
+
     </style>
 </head>
 <body class="text-gray-800">
@@ -182,54 +228,63 @@
     </div>
 
     <!-- Header & Navigation -->
-    <header id="header" class="fixed top-0 left-0 right-0 z-50 sticky-nav">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#home">
-                <img src="https://re-arthconsultancy.com/wp-content/uploads/2022/02/Re-Arth-Logo-2-edited-300x200.jpg" alt="Re-Arth Consultancy Logo" class="h-12">
-            </a>
-            <!-- Desktop Nav -->
-            <nav class="hidden md:flex space-x-8 items-center">
-                <a href="#home" class="text-gray-600 hover:text-teal-500 transition">Home</a>
-                <a href="#about" class="text-gray-600 hover:text-teal-500 transition">About</a>
-                <a href="#services" class="text-gray-600 hover:text-teal-500 transition">Services</a>
-                <a href="#plans" class="text-gray-600 hover:text-teal-500 transition">Our Plans</a>
-                <a href="#calculator" class="text-gray-600 hover:text-teal-500 transition">Calculator</a>
-                <a href="#testimonials" class="text-gray-600 hover:text-teal-500 transition">Testimonials</a>
-                <a href="#contact" class="text-gray-600 hover:text-teal-500 transition">Contact</a>
-            </nav>
-            <!-- Mobile Menu Button -->
-            <button id="mobile-menu-button" class="md:hidden text-gray-800 z-50">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path id="hamburger-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-                    <path id="close-icon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-            </button>
+    <header id="header" class="fixed group z-50 w-full px-2">
+        <div id="nav-container" class="mx-auto mt-2 max-w-6xl px-6 transition-all duration-300 lg:px-12">
+            <div class="relative flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0 lg:py-4">
+                <div class="flex w-full justify-between lg:w-auto">
+                    <a href="#home">
+                        <img src="https://re-arthconsultancy.com/wp-content/uploads/2022/02/Re-Arth-Logo-2-edited-300x200.jpg" alt="Re-Arth Consultancy Logo" class="h-12">
+                    </a>
+                    <button id="mobile-menu-button" aria-label="Open Menu" class="relative z-20 -m-2.5 -mr-4 block cursor-pointer p-2.5 lg:hidden">
+                        <svg id="hamburger-icon" class="m-auto h-6 w-6 duration-200" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
+                        <svg id="close-icon" class="hidden m-auto h-6 w-6 duration-200" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" x2="6" y1="6" y2="18"></line><line x1="6" x2="18" y1="6" y2="18"></line></svg>
+                    </button>
+                </div>
+                <div class="absolute inset-0 m-auto hidden h-fit w-fit lg:block">
+                    <ul class="flex gap-8 text-sm">
+                        <li><a href="#about" class="text-gray-600 hover:text-teal-500 transition">About</a></li>
+                        <li><a href="#services" class="text-gray-600 hover:text-teal-500 transition">Services</a></li>
+                        <li><a href="#plans" class="text-gray-600 hover:text-teal-500 transition">Our Plans</a></li>
+                        <li><a href="#insights" class="text-gray-600 hover:text-teal-500 transition">Market Insights</a></li>
+                         <li><a href="#testimonials" class="text-gray-600 hover:text-teal-500 transition">Testimonials</a></li>
+                    </ul>
+                </div>
+                <div id="mobile-menu-content" class="hidden w-full flex-wrap items-center justify-end space-y-8 rounded-3xl border border-gray-200 bg-white p-6 shadow-2xl shadow-zinc-300/20 lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none dark:shadow-none">
+                    <ul class="w-full space-y-6 text-base lg:hidden">
+                        <li><a href="#about" class="mobile-menu-link text-gray-600 hover:text-teal-500 transition">About</a></li>
+                        <li><a href="#services" class="mobile-menu-link text-gray-600 hover:text-teal-500 transition">Services</a></li>
+                        <li><a href="#plans" class="mobile-menu-link text-gray-600 hover:text-teal-500 transition">Our Plans</a></li>
+                        <li><a href="#insights" class="mobile-menu-link text-gray-600 hover:text-teal-500 transition">Market Insights</a></li>
+                        <li><a href="#testimonials" class="mobile-menu-link text-gray-600 hover:text-teal-500 transition">Testimonials</a></li>
+                        <li><a href="#contact" class="mobile-menu-link text-gray-600 hover:text-teal-500 transition">Contact</a></li>
+                    </ul>
+                    <div class="flex w-full flex-col sm:w-fit">
+                         <a href="#contact" class="w-full text-center bg-teal-500 text-white font-semibold py-2 px-6 rounded-lg shadow-lg hover:bg-teal-600 transition">
+                            Book Consultation
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden fixed inset-0 bg-white z-40 flex flex-col items-center justify-center space-y-8 text-2xl">
-        <a href="#home" class="mobile-menu-link text-gray-800 hover:text-teal-500 transition">Home</a>
-        <a href="#about" class="mobile-menu-link text-gray-800 hover:text-teal-500 transition">About</a>
-        <a href="#services" class="mobile-menu-link text-gray-800 hover:text-teal-500 transition">Services</a>
-        <a href="#plans" class="mobile-menu-link text-gray-800 hover:text-teal-500 transition">Our Plans</a>
-        <a href="#calculator" class="mobile-menu-link text-gray-800 hover:text-teal-500 transition">Calculator</a>
-        <a href="#testimonials" class="mobile-menu-link text-gray-800 hover:text-teal-500 transition">Testimonials</a>
-        <a href="#contact" class="mobile-menu-link text-gray-800 hover:text-teal-500 transition">Contact</a>
-    </div>
-
     <!-- Hero Section -->
-    <section id="home" class="hero-bg min-h-screen flex items-center pt-20">
-        <div class="floating-shape floating-shape-1"></div>
-        <div class="floating-shape floating-shape-2"></div>
-        <div class="floating-shape floating-shape-3"></div>
-        <div class="floating-shape floating-shape-4"></div>
-        <div class="container mx-auto px-6 text-center z-10">
-            <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4 reveal">Your Partner in Wealth Creation and Smart Investments.</h1>
-            <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-3xl mx-auto reveal" style="transition-delay: 0.2s;">Helping you grow your financial potential through trusted advisory, innovative insights, and transparent consulting.</p>
-            <div class="flex justify-center space-x-4 reveal" style="transition-delay: 0.4s;">
-                <a href="#plans" class="bg-teal-500 text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-teal-600 transition-transform transform hover:scale-105">Explore Plans</a>
-                <a href="#contact" class="bg-white text-teal-500 font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-gray-100 transition-transform transform hover:scale-105">Book Consultation</a>
+    <section id="home" class="hero-bg min-h-screen flex items-center pt-24 md:pt-20">
+        <div class="container mx-auto px-6 z-10">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Text Content -->
+                <div class="text-center md:text-left">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 reveal">Your Partner in Wealth Creation and Smart Investments.</h1>
+                    <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-xl mx-auto md:mx-0 reveal" style="transition-delay: 0.2s;">Helping you grow your financial potential through trusted advisory, innovative insights, and transparent consulting.</p>
+                    <div class="flex justify-center md:justify-start space-x-4 reveal" style="transition-delay: 0.4s;">
+                        <a href="#plans" class="bg-teal-500 text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-teal-600 transition-transform transform hover:scale-105">Explore Plans</a>
+                        <a href="#contact" class="bg-white text-teal-500 font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-gray-100 transition-transform transform hover:scale-105">Book Consultation</a>
+                    </div>
+                </div>
+                <!-- Lottie Animation -->
+                <div class="hidden md:flex justify-center items-center reveal" style="transition-delay: 0.3s;">
+                    <lottie-player src="https://lottie.host/804b4292-62b8-472e-836a-2775f28f5228/qJ8uNa2i6t.json" background="transparent" speed="1" style="width: 100%; max-width: 500px;" loop autoplay></lottie-player>
+                </div>
             </div>
         </div>
         <div class="absolute bottom-10 left-1/2 -translate-x-1/2">
@@ -329,91 +384,138 @@
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold mb-4 reveal">Our Investment Plans</h2>
                 <p class="text-gray-600 max-w-3xl mx-auto reveal" style="transition-delay: 0.2s;">Structured plans designed for clear, compounded returns. Choose the path that aligns with your goals.</p>
+                <div class="mt-8 reveal" style="transition-delay: 0.3s;">
+                    <button id="ai-recommender-btn" class="turquoise-gradient-bg text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transition-transform transform hover:scale-105">
+                        ✨ Get AI Recommendation
+                    </button>
+                </div>
             </div>
             
             <!-- New Plan Cards -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Plan 1 -->
-                <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-transform transform hover:scale-105 reveal h-full flex flex-col">
-                    <div class="flex-grow">
-                        <div class="flex justify-between items-baseline">
-                            <h3 class="text-xl font-bold">Plan 1</h3>
-                            <span class="bg-teal-100 text-teal-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">EMI Based</span>
-                        </div>
-                        <p class="text-gray-500 mt-2">Rs 10,000/month</p>
-                        <p class="text-sm text-gray-400 mb-4">(Return Start After Rs 50,000)</p>
-                        <div class="my-6 text-center">
-                            <p class="text-5xl font-bold text-teal-500">30%</p>
-                            <p class="text-gray-600">Yearly Return</p>
-                        </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 reveal h-full flex flex-col electric-border" style="--electric-border-color: #40E0D0;" data-plan-name="Plan 1" data-plan-details="Type: EMI Based, Investment: Rs 10,000/month, Return: 30% yearly. Good for beginners starting their investment journey.">
+                    <div class="eb-layers">
+                        <div class="eb-stroke"></div>
+                        <div class="eb-glow-1"></div>
+                        <div class="eb-glow-2"></div>
+                        <div class="eb-background-glow"></div>
                     </div>
-                    <a href="#contact" class="w-full text-center bg-gray-200 text-gray-800 font-semibold py-3 px-8 rounded-full hover:bg-gray-300 transition mt-auto">Choose Plan</a>
+                    <div class="eb-content">
+                        <div class="flex-grow">
+                            <div class="flex justify-between items-baseline">
+                                <h3 class="text-xl font-bold">Plan 1</h3>
+                                <span class="bg-teal-100 text-teal-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">EMI Based</span>
+                            </div>
+                            <p class="text-gray-500 mt-2">Rs 10,000/month</p>
+                            <p class="text-sm text-gray-400 mb-4">(Return Start After Rs 50,000)</p>
+                            <div class="my-6 text-center">
+                                <p class="text-5xl font-bold text-teal-500">30%</p>
+                                <p class="text-gray-600">Yearly Return</p>
+                            </div>
+                        </div>
+                        <a href="#contact" class="w-full text-center bg-gray-200 text-gray-800 font-semibold py-3 px-8 rounded-full hover:bg-gray-300 transition mt-auto">Choose Plan</a>
+                    </div>
                 </div>
                 
                 <!-- Plan 2 -->
-                <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-transform transform hover:scale-105 reveal h-full flex flex-col" style="transition-delay: 0.1s;">
-                     <div class="flex-grow">
-                        <div class="flex justify-between items-baseline">
-                            <h3 class="text-xl font-bold">Plan 2</h3>
-                            <span class="bg-teal-100 text-teal-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">EMI Based</span>
-                        </div>
-                        <p class="text-gray-500 mt-2">Rs 20,000/month</p>
-                        <p class="text-sm text-gray-400 mb-4">(Return Start After Rs 100,000)</p>
-                        <div class="my-6 text-center">
-                            <p class="text-5xl font-bold text-teal-500">35-36%</p>
-                            <p class="text-gray-600">Yearly Return</p>
-                        </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 reveal h-full flex flex-col electric-border" style="transition-delay: 0.1s; --electric-border-color: #40E0D0;" data-plan-name="Plan 2" data-plan-details="Type: EMI Based, Investment: Rs 20,000/month, Return: 35-36% yearly. Suitable for those looking to invest a regular amount for steady growth.">
+                    <div class="eb-layers">
+                        <div class="eb-stroke"></div>
+                        <div class="eb-glow-1"></div>
+                        <div class="eb-glow-2"></div>
+                        <div class="eb-background-glow"></div>
                     </div>
-                    <a href="#contact" class="w-full text-center bg-gray-200 text-gray-800 font-semibold py-3 px-8 rounded-full hover:bg-gray-300 transition mt-auto">Choose Plan</a>
+                     <div class="eb-content">
+                        <div class="flex-grow">
+                            <div class="flex justify-between items-baseline">
+                                <h3 class="text-xl font-bold">Plan 2</h3>
+                                <span class="bg-teal-100 text-teal-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">EMI Based</span>
+                            </div>
+                            <p class="text-gray-500 mt-2">Rs 20,000/month</p>
+                            <p class="text-sm text-gray-400 mb-4">(Return Start After Rs 100,000)</p>
+                            <div class="my-6 text-center">
+                                <p class="text-5xl font-bold text-teal-500">35-36%</p>
+                                <p class="text-gray-600">Yearly Return</p>
+                            </div>
+                        </div>
+                        <a href="#contact" class="w-full text-center bg-gray-200 text-gray-800 font-semibold py-3 px-8 rounded-full hover:bg-gray-300 transition mt-auto">Choose Plan</a>
+                    </div>
                 </div>
 
                 <!-- Plan 3 (Popular Highlight) -->
-                <div class="plan-card-popular turquoise-gradient-bg text-white p-8 rounded-2xl shadow-lg relative reveal h-full flex flex-col" style="transition-delay: 0.2s;">
-                    <span class="absolute top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 bg-yellow-400 text-gray-800 text-sm font-bold px-4 py-1 rounded-full">POPULAR</span>
-                     <div class="flex-grow">
-                        <div class="flex justify-between items-baseline">
-                            <h3 class="text-xl font-bold">Plan 3</h3>
-                            <span class="bg-white/20 text-white text-xs font-semibold px-2.5 py-0.5 rounded-full">One Time</span>
+                <div class="plan-card-popular relative reveal h-full flex flex-col" style="transition-delay: 0.2s;" data-plan-name="Plan 3" data-plan-details="Type: One Time, Investment: Rs 1–3 lakh, Return: 45% yearly. A popular choice for a significant one-time investment with high returns.">
+                    <div class="electric-border turquoise-gradient-bg text-white p-8 rounded-2xl shadow-lg h-full" style="--electric-border-color: #FFFFFF;">
+                         <div class="eb-layers">
+                            <div class="eb-stroke"></div>
+                            <div class="eb-glow-1"></div>
+                            <div class="eb-glow-2"></div>
+                            <div class="eb-background-glow"></div>
                         </div>
-                        <p class="opacity-80 mt-2">Investment: Rs 1–3 lakh</p>
-                        <div class="my-10 text-center">
-                            <p class="text-5xl font-bold">45%</p>
-                            <p class="opacity-90">Yearly Return</p>
+                        <div class="eb-content">
+                            <span class="absolute top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 bg-yellow-400 text-gray-800 text-sm font-bold px-4 py-1 rounded-full">POPULAR</span>
+                             <div class="flex-grow">
+                                <div class="flex justify-between items-baseline">
+                                    <h3 class="text-xl font-bold">Plan 3</h3>
+                                    <span class="bg-white/20 text-white text-xs font-semibold px-2.5 py-0.5 rounded-full">One Time</span>
+                                </div>
+                                <p class="opacity-80 mt-2">Investment: Rs 1–3 lakh</p>
+                                <div class="my-10 text-center">
+                                    <p class="text-5xl font-bold">45%</p>
+                                    <p class="opacity-90">Yearly Return</p>
+                                </div>
+                            </div>
+                            <a href="#contact" class="w-full text-center bg-white text-teal-600 font-semibold py-3 px-8 rounded-full hover:bg-gray-100 transition mt-auto">Choose Plan</a>
                         </div>
                     </div>
-                    <a href="#contact" class="w-full text-center bg-white text-teal-600 font-semibold py-3 px-8 rounded-full hover:bg-gray-100 transition mt-auto">Choose Plan</a>
                 </div>
 
                 <!-- Plan 4 -->
-                 <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-transform transform hover:scale-105 reveal h-full flex flex-col lg:col-start-2" style="transition-delay: 0.3s;">
-                     <div class="flex-grow">
-                        <div class="flex justify-between items-baseline">
-                            <h3 class="text-xl font-bold">Plan 4</h3>
-                            <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">One Time</span>
-                        </div>
-                        <p class="text-gray-500 mt-2">Investment: Rs 3–5 lakh</p>
-                        <div class="my-10 text-center">
-                            <p class="text-5xl font-bold text-teal-500">55%</p>
-                            <p class="text-gray-600">Yearly Return</p>
-                        </div>
+                 <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 reveal h-full flex flex-col electric-border lg:col-start-2" style="transition-delay: 0.3s; --electric-border-color: #3b82f6;" data-plan-name="Plan 4" data-plan-details="Type: One Time, Investment: Rs 3–5 lakh, Return: 55% yearly. Designed for larger one-time investments targeting substantial growth.">
+                    <div class="eb-layers">
+                        <div class="eb-stroke"></div>
+                        <div class="eb-glow-1"></div>
+                        <div class="eb-glow-2"></div>
+                        <div class="eb-background-glow"></div>
                     </div>
-                    <a href="#contact" class="w-full text-center bg-gray-200 text-gray-800 font-semibold py-3 px-8 rounded-full hover:bg-gray-300 transition mt-auto">Choose Plan</a>
+                     <div class="eb-content">
+                        <div class="flex-grow">
+                            <div class="flex justify-between items-baseline">
+                                <h3 class="text-xl font-bold">Plan 4</h3>
+                                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">One Time</span>
+                            </div>
+                            <p class="text-gray-500 mt-2">Investment: Rs 3–5 lakh</p>
+                            <div class="my-10 text-center">
+                                <p class="text-5xl font-bold text-teal-500">55%</p>
+                                <p class="text-gray-600">Yearly Return</p>
+                            </div>
+                        </div>
+                        <a href="#contact" class="w-full text-center bg-gray-200 text-gray-800 font-semibold py-3 px-8 rounded-full hover:bg-gray-300 transition mt-auto">Choose Plan</a>
+                    </div>
                 </div>
 
                 <!-- Plan 5 -->
-                 <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-transform transform hover:scale-105 reveal h-full flex flex-col" style="transition-delay: 0.4s;">
-                     <div class="flex-grow">
-                        <div class="flex justify-between items-baseline">
-                            <h3 class="text-xl font-bold">Plan 5</h3>
-                            <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Premium</span>
-                        </div>
-                        <p class="text-gray-500 mt-2">Investment: Rs 5 lakh+</p>
-                        <div class="my-10 text-center">
-                            <p class="text-5xl font-bold text-teal-500">70%</p>
-                            <p class="text-gray-600">Yearly Return</p>
-                        </div>
+                 <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 reveal h-full flex flex-col electric-border" style="transition-delay: 0.4s; --electric-border-color: #8b5cf6;" data-plan-name="Plan 5" data-plan-details="Type: Premium Plan - One Time, Investment: Rs 5 lakh+, Return: 70% yearly. The premium option for maximum returns on a significant investment.">
+                    <div class="eb-layers">
+                        <div class="eb-stroke"></div>
+                        <div class="eb-glow-1"></div>
+                        <div class="eb-glow-2"></div>
+                        <div class="eb-background-glow"></div>
                     </div>
-                    <a href="#contact" class="w-full text-center bg-gray-200 text-gray-800 font-semibold py-3 px-8 rounded-full hover:bg-gray-300 transition mt-auto">Choose Plan</a>
+                     <div class="eb-content">
+                        <div class="flex-grow">
+                            <div class="flex justify-between items-baseline">
+                                <h3 class="text-xl font-bold">Plan 5</h3>
+                                <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Premium</span>
+                            </div>
+                            <p class="text-gray-500 mt-2">Investment: Rs 5 lakh+</p>
+                            <div class="my-10 text-center">
+                                <p class="text-5xl font-bold text-teal-500">70%</p>
+                                <p class="text-gray-600">Yearly Return</p>
+                            </div>
+                        </div>
+                        <a href="#contact" class="w-full text-center bg-gray-200 text-gray-800 font-semibold py-3 px-8 rounded-full hover:bg-gray-300 transition mt-auto">Choose Plan</a>
+                    </div>
                 </div>
             </div>
 
@@ -573,6 +675,29 @@
         </div>
     </section>
 
+    <!-- AI Market Insights Section -->
+    <section id="insights" class="py-20 gradient-bg">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 reveal">✨ AI-Powered Market Insights</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto reveal" style="transition-delay: 0.2s;">Get a real-time snapshot of the Indian financial market, powered by Gemini. Click the button to generate today's summary.</p>
+            </div>
+            <div class="max-w-3xl mx-auto text-center">
+                <button id="generate-insights-btn" class="turquoise-gradient-bg text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transition-transform transform hover:scale-105 reveal">
+                    Generate Today's Market Snapshot
+                </button>
+                <div id="insights-result-container" class="mt-8 text-left glassmorphism p-8 rounded-2xl shadow-lg hidden reveal">
+                    <div id="insights-loader" class="hidden my-4 text-center">
+                        <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-teal-500 mx-auto"></div>
+                        <p class="mt-2 text-gray-600">Generating today's insights...</p>
+                    </div>
+                    <div id="insights-content"></div>
+                    <p class="text-xs text-gray-500 mt-6 text-center italic">Disclaimer: This content is AI-generated for informational purposes and should not be considered financial advice.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Testimonials Section -->
     <section id="testimonials" class="py-20 bg-white">
         <div class="container mx-auto px-6">
@@ -678,30 +803,75 @@
         </div>
     </footer>
     
+    <!-- AI Recommender Modal -->
+    <div id="ai-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-center p-4">
+        <div class="bg-white rounded-2xl shadow-2xl p-8 max-w-lg w-full relative transform transition-all duration-300 scale-95 opacity-0" id="ai-modal-content">
+            <button id="close-ai-modal" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600">&times;</button>
+            <h3 class="text-2xl font-bold mb-6 text-center">✨ Find Your Perfect Plan</h3>
+            <div id="ai-form">
+                <div class="space-y-4">
+                    <div>
+                        <label for="investment-goal" class="block text-sm font-medium text-gray-700 mb-1">What is your primary investment goal?</label>
+                        <input type="text" id="investment-goal" placeholder="e.g., Buy a house in 5 years, save for retirement" class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-400 transition">
+                    </div>
+                    <div>
+                        <label for="risk-tolerance" class="block text-sm font-medium text-gray-700 mb-1">What is your risk tolerance?</label>
+                        <select id="risk-tolerance" class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-400 transition">
+                            <option>Low - I prefer safer, stable returns.</option>
+                            <option>Medium - I'm willing to take some risks for better returns.</option>
+                            <option>High - I'm comfortable with high risk for the highest possible returns.</option>
+                        </select>
+                    </div>
+                </div>
+                <button id="get-suggestion-btn" class="w-full mt-6 bg-teal-500 text-white font-semibold py-3 px-8 rounded-lg shadow-lg hover:bg-teal-600 transition disabled:opacity-50">Get Suggestion</button>
+            </div>
+            <div id="ai-result" class="hidden text-center">
+                <div id="ai-loader" class="hidden my-4">
+                    <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-teal-500 mx-auto"></div>
+                    <p class="mt-2 text-gray-600">Analyzing your details...</p>
+                </div>
+                <div id="ai-recommendation"></div>
+                <button id="ai-reset-btn" class="w-full mt-6 bg-gray-200 text-gray-800 font-semibold py-3 px-8 rounded-lg hover:bg-gray-300 transition">Start Over</button>
+            </div>
+        </div>
+    </div>
+
     <!-- Scroll to top button -->
     <button id="scrollTopBtn" title="Go to top">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
         </svg>
     </button>
 
 
     <script>
-        window.addEventListener('load', () => {
-            const preloader = document.getElementById('preloader');
-            preloader.classList.add('hidden');
-        });
-
         document.addEventListener('DOMContentLoaded', () => {
+            // Preloader logic: Fade out and then remove
+            const preloader = document.getElementById('preloader');
+            if (preloader) {
+                // Start the fade out transition
+                preloader.style.opacity = '0';
+                // After the transition completes (500ms), set display to none
+                setTimeout(() => {
+                    if (preloader) {
+                        preloader.style.display = 'none';
+                    }
+                }, 500);
+            }
+
             // Sticky Navigation
-            const header = document.getElementById('header');
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 50) {
-                    header.classList.add('scrolled');
-                } else {
-                    header.classList.remove('scrolled');
-                }
-            });
+            const navContainer = document.getElementById('nav-container');
+            if (navContainer) {
+                 window.addEventListener('scroll', () => {
+                    if (window.scrollY > 50) {
+                        navContainer.classList.add('bg-white/50', 'max-w-4xl', 'rounded-2xl', 'border', 'border-gray-200', 'backdrop-blur-lg', 'shadow-md');
+                        navContainer.classList.remove('max-w-6xl');
+                    } else {
+                        navContainer.classList.remove('bg-white/50', 'max-w-4xl', 'rounded-2xl', 'border', 'border-gray-200', 'backdrop-blur-lg', 'shadow-md');
+                        navContainer.classList.add('max-w-6xl');
+                    }
+                });
+            }
 
             // Intersection Observer for reveal animations
             const revealElements = document.querySelectorAll('.reveal');
@@ -762,7 +932,6 @@
                 }
             };
             scrollTopBtn.addEventListener('click', () => {
-                // Use our custom scroll function for consistency
                 const homeElement = document.querySelector('#home');
                 if (homeElement) {
                     window.scrollTo({
@@ -772,20 +941,23 @@
                 }
             });
 
-            // Mobile Menu Logic & Smooth Scrolling
+            // Corrected Mobile Menu Logic
             const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileMenuContent = document.getElementById('mobile-menu-content');
             const hamburgerIcon = document.getElementById('hamburger-icon');
             const closeIcon = document.getElementById('close-icon');
 
             const toggleMenu = () => {
-                mobileMenu.classList.toggle('hidden');
-                document.body.classList.toggle('overflow-hidden');
-                hamburgerIcon.classList.toggle('hidden');
-                closeIcon.classList.toggle('hidden');
+                if(mobileMenuContent && hamburgerIcon && closeIcon) {
+                    mobileMenuContent.classList.toggle('hidden');
+                    hamburgerIcon.classList.toggle('hidden');
+                    closeIcon.classList.toggle('hidden');
+                }
             };
 
-            mobileMenuButton.addEventListener('click', toggleMenu);
+            if(mobileMenuButton) {
+                mobileMenuButton.addEventListener('click', toggleMenu);
+            }
 
             // Smooth scrolling for all anchor links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -797,11 +969,12 @@
                         e.preventDefault();
 
                         // Close mobile menu if it's open
-                        if (!mobileMenu.classList.contains('hidden')) {
-                            toggleMenu();
+                        if (mobileMenuContent && !mobileMenuContent.classList.contains('hidden')) {
+                           toggleMenu();
                         }
                         
-                        const headerOffset = document.getElementById('header').offsetHeight;
+                        const header = document.getElementById('header');
+                        const headerOffset = header ? header.offsetHeight : 0;
                         const elementPosition = targetElement.offsetTop;
                         const offsetPosition = elementPosition - headerOffset;
 
@@ -836,6 +1009,168 @@
                     }, 4000);
                 }, 1000);
             });
+
+            // --- AI Recommender Logic ---
+            const aiModal = document.getElementById('ai-modal');
+            const aiModalContent = document.getElementById('ai-modal-content');
+            const openAiModalBtn = document.getElementById('ai-recommender-btn');
+            const closeAiModalBtn = document.getElementById('close-ai-modal');
+            const getSuggestionBtn = document.getElementById('get-suggestion-btn');
+            const aiForm = document.getElementById('ai-form');
+            const aiResult = document.getElementById('ai-result');
+            const aiLoader = document.getElementById('ai-loader');
+            const aiRecommendation = document.getElementById('ai-recommendation');
+            const aiResetBtn = document.getElementById('ai-reset-btn');
+
+            const openModal = () => {
+                aiModal.classList.remove('hidden');
+                setTimeout(() => {
+                    aiModalContent.classList.remove('scale-95', 'opacity-0');
+                }, 10);
+            };
+
+            const closeModal = () => {
+                aiModalContent.classList.add('scale-95', 'opacity-0');
+                setTimeout(() => {
+                    aiModal.classList.add('hidden');
+                    // Reset form for next time
+                    aiForm.classList.remove('hidden');
+                    aiResult.classList.add('hidden');
+                    aiRecommendation.innerHTML = '';
+                }, 300);
+            };
+
+            openAiModalBtn.addEventListener('click', openModal);
+            closeAiModalBtn.addEventListener('click', closeModal);
+            aiModal.addEventListener('click', (e) => {
+                if (e.target === aiModal) {
+                    closeModal();
+                }
+            });
+            aiResetBtn.addEventListener('click', () => {
+                aiForm.classList.remove('hidden');
+                aiResult.classList.add('hidden');
+                aiRecommendation.innerHTML = '';
+            });
+
+            getSuggestionBtn.addEventListener('click', async () => {
+                const goal = document.getElementById('investment-goal').value;
+                const risk = document.getElementById('risk-tolerance').value;
+
+                if (!goal) {
+                    alert('Please enter your investment goal.');
+                    return;
+                }
+
+                // Show loader and hide form
+                aiForm.classList.add('hidden');
+                aiResult.classList.remove('hidden');
+                aiLoader.classList.remove('hidden');
+                aiRecommendation.innerHTML = '';
+
+                // Scrape plan details from the page
+                let planDetails = '';
+                document.querySelectorAll('[data-plan-name]').forEach(plan => {
+                    planDetails += `- **${plan.dataset.planName}:** ${plan.dataset.planDetails}\n`;
+                });
+
+                const prompt = `You are a helpful financial assistant for Re-Arth Consultancy. A potential client needs a recommendation for an investment plan.
+
+                Client's details:
+                - Investment Goal: "${goal}"
+                - Risk Tolerance: "${risk}"
+
+                Here are the available plans:
+                ${planDetails}
+
+                Based on the client's details, which plan would you recommend? Your response must be in the following format and only include this format, with no extra text before or after:
+                **Recommended Plan:** [Name of the Plan]
+                **Reasoning:** [A concise, 2-3 sentence explanation of why this plan is a good fit for the client. Be encouraging and professional.]`;
+
+                try {
+                    const apiKey = ""; // API key is handled by the environment
+                    const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+
+                    const response = await fetch(apiUrl, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] })
+                    });
+
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok.');
+                    }
+
+                    const result = await response.json();
+                    const text = result.candidates[0].content.parts[0].text;
+                    
+                    const recommendedPlan = text.split('**Recommended Plan:**')[1].split('**Reasoning:**')[0].trim();
+                    const reasoning = text.split('**Reasoning:**')[1].trim();
+                    
+                    aiRecommendation.innerHTML = `
+                        <p class="text-gray-600 mb-2">Based on your details, we recommend:</p>
+                        <h4 class="text-2xl font-bold text-teal-600 mb-4">${recommendedPlan}</h4>
+                        <p class="text-gray-700 bg-teal-50 p-4 rounded-lg border border-teal-200">${reasoning}</p>
+                    `;
+
+                } catch (error) {
+                    console.error("Error calling Gemini API:", error);
+                    aiRecommendation.innerHTML = '<p class="text-red-500">Sorry, we couldn\'t get a recommendation at this time. Please try again later.</p>';
+                } finally {
+                    aiLoader.classList.add('hidden');
+                }
+            });
+
+
+            // --- Market Insights Logic ---
+            const generateInsightsBtn = document.getElementById('generate-insights-btn');
+            const insightsResultContainer = document.getElementById('insights-result-container');
+            const insightsLoader = document.getElementById('insights-loader');
+            const insightsContent = document.getElementById('insights-content');
+
+            generateInsightsBtn.addEventListener('click', async () => {
+                insightsResultContainer.classList.remove('hidden');
+                insightsLoader.classList.remove('hidden');
+                insightsContent.innerHTML = '';
+
+                const prompt = "Act as a financial analyst for the Indian market. Provide a brief, easy-to-understand market snapshot for today. Your audience is potential investors who are not experts. Include: 1. A quick summary of NIFTY 50 and BSE SENSEX performance. 2. Mention one or two sectors that are currently in focus (e.g., IT, banking, auto). 3. A concluding sentence on the general investor sentiment (e.g., cautious, optimistic). Keep the entire response to a single, concise paragraph and make it engaging.";
+
+                try {
+                    const apiKey = ""; // API key is handled by the environment
+                    const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+                    
+                    const payload = {
+                        contents: [{ parts: [{ text: prompt }] }],
+                        tools: [{ "google_search": {} }], // Enable Google Search for real-time data
+                    };
+
+                    const response = await fetch(apiUrl, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+
+                    if (!response.ok) {
+                        throw new Error(`Network response was not ok. Status: ${response.status}`);
+                    }
+
+                    const result = await response.json();
+                    
+                    if (result.candidates && result.candidates[0].content) {
+                        const text = result.candidates[0].content.parts[0].text;
+                        insightsContent.innerHTML = `<p class="text-gray-700">${text.replace(/\n/g, '<br>')}</p>`;
+                    } else {
+                        throw new Error('Invalid response structure from API.');
+                    }
+
+                } catch (error) {
+                    console.error("Error calling Gemini API for insights:", error);
+                    insightsContent.innerHTML = '<p class="text-red-500 text-center">Sorry, we couldn\'t generate market insights at this time. Please try again later.</p>';
+                } finally {
+                    insightsLoader.classList.add('hidden');
+                }
+            });
+
 
             // Investment Calculator Logic
             const investmentSlider = document.getElementById('investment-slider');
@@ -945,7 +1280,4 @@
     </script>
 </body>
 </html>
-
-
-
 
