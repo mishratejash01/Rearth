@@ -223,79 +223,83 @@
 <body class="text-gray-800">
 
     <div id="preloader">
-        <img src="https://i.ibb.co/3YNPrM1T/image.png" alt="Re-Arth Consultancy Logo" class="h-20 animate-pulse">
+        <img src="https://re-arthconsultancy.com/wp-content/uploads/2022/02/Re-Arth-Logo-2-edited-300x200.jpg" alt="Re-Arth Consultancy Logo" class="h-20 animate-pulse">
     </div>
 
     <header id="header" class="fixed group z-50 w-full px-2">
         <div id="nav-container" class="mx-auto mt-2 max-w-6xl px-6 transition-all duration-300 lg:px-12">
-            <div class="relative flex items-center justify-between py-3 lg:py-4">
-                <div class="relative z-20 flex-shrink-0">
+            <div class="relative flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0 lg:py-4">
+           
+                 <div class="flex w-full justify-between lg:w-auto">
                     <a href="#home">
-                        <img src="https://i.ibb.co/3YNPrM1T/image.png" alt="Re-Arth Consultancy Logo" class="h-12">
+                        <img src="https://re-arthconsultancy.com/wp-content/uploads/2022/02/Re-Arth-Logo-2-edited-300x200.jpg" alt="Re-Arth Consultancy Logo" class="h-12">
                     </a>
+                    <button 
+id="mobile-menu-button" aria-label="Open Menu" class="relative z-20 -m-2.5 -mr-4 block cursor-pointer p-2.5 lg:hidden">
+                        <svg id="hamburger-icon" class="m-auto h-6 w-6 duration-200" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
+                        <svg id="close-icon" class="hidden m-auto h-6 w-6 duration-200" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 
+24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" x2="6" y1="6" y2="18"></line><line x1="6" x2="18" y1="6" y2="18"></line></svg>
+                    </button>
                 </div>
-
-                <div class="hidden lg:flex lg:flex-1 lg:justify-center">
+                <div class="absolute inset-0 m-auto hidden h-fit w-fit lg:block">
                     <ul class="flex gap-8 text-sm">
+     
                         <li><a href="#about" class="text-gray-600 hover:text-teal-500 transition">About</a></li>
                         <li><a href="#services" class="text-gray-600 hover:text-teal-500 transition">Services</a></li>
                         <li><a href="#plans" class="text-gray-600 hover:text-teal-500 transition">Our Plans</a></li>
-                        <li><a href="#insights" class="text-gray-600 hover:text-teal-500 transition">Market Insights</a></li>
-                        <li><a href="#testimonials" class="text-gray-600 hover:text-teal-500 transition">Testimonials</a></li>
+                    
+        <li><a href="#insights" class="text-gray-600 hover:text-teal-500 transition">Market Insights</a></li>
+                         <li><a href="#testimonials" class="text-gray-600 hover:text-teal-500 transition">Testimonials</a></li>
                     </ul>
                 </div>
-
-                <div class="hidden lg:flex items-center flex-shrink-0">
-                    <a href="#contact" class="text-center bg-teal-500 text-white font-semibold py-2 px-6 rounded-lg shadow-lg hover:bg-teal-600 transition">
-                        Book Consultation
-                    </a>
-                </div>
-                
-                <div class="lg:hidden flex items-center">
-                    <button id="mobile-menu-button" aria-label="Open Menu" class="relative z-20 p-2.5">
-                        <svg id="hamburger-icon" class="m-auto h-6 w-6 duration-200" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
-                        <svg id="close-icon" class="hidden m-auto h-6 w-6 duration-200" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" x2="6" y1="6" y2="18"></line><line x1="6" x2="18" y1="6" y2="18"></line></svg>
-                    </button>
-                </div>
-            </div>
-            
-            <div id="mobile-menu-content" class="hidden lg:hidden rounded-3xl border border-gray-200 bg-white p-6 shadow-2xl shadow-zinc-300/20">
-                <ul class="w-full space-y-6 text-base">
-                    <li><a href="#about" class="mobile-menu-link text-gray-600 hover:text-teal-500 transition">About</a></li>
-                    <li><a href="#services" class="mobile-menu-link text-gray-600 hover:text-teal-500 transition">Services</a></li>
-                    <li><a href="#plans" class="mobile-menu-link text-gray-600 hover:text-teal-500 transition">Our Plans</a></li>
-                    <li><a href="#insights" class="mobile-menu-link text-gray-600 hover:text-teal-500 transition">Market Insights</a></li>
-                    <li><a href="#testimonials" class="mobile-menu-link text-gray-600 hover:text-teal-500 transition">Testimonials</a></li>
-                    <li><a href="#contact" class="mobile-menu-link text-gray-600 hover:text-teal-500 transition">Contact</a></li>
-                </ul>
-                <div class="flex w-full flex-col mt-6">
-                     <a href="#contact" class="w-full text-center bg-teal-500 text-white font-semibold py-2 px-6 rounded-lg shadow-lg hover:bg-teal-600 transition">
-                        Book Consultation
-                    </a>
+                <div id="mobile-menu-content" class="hidden w-full flex-wrap items-center justify-end space-y-8 rounded-3xl border 
+border-gray-200 bg-white p-6 shadow-2xl shadow-zinc-300/20 lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none dark:shadow-none">
+                    <ul class="w-full space-y-6 text-base lg:hidden">
+                        <li><a href="#about" class="mobile-menu-link text-gray-600 hover:text-teal-500 transition">About</a></li>
+                        <li><a href="#services" class="mobile-menu-link text-gray-600 hover:text-teal-500 transition">Services</a></li>
+    
+                        <li><a href="#plans" class="mobile-menu-link text-gray-600 hover:text-teal-500 transition">Our Plans</a></li>
+                        <li><a href="#insights" class="mobile-menu-link text-gray-600 hover:text-teal-500 transition">Market Insights</a></li>
+                        <li><a href="#testimonials" class="mobile-menu-link text-gray-600 hover:text-teal-500 transition">Testimonials</a></li>
+               
+                 <li><a href="#contact" class="mobile-menu-link text-gray-600 hover:text-teal-500 transition">Contact</a></li>
+                    </ul>
+                    <div class="flex w-full flex-col sm:w-fit">
+                         <a href="#contact" class="w-full text-center bg-teal-500 text-white font-semibold py-2 px-6 rounded-lg shadow-lg hover:bg-teal-600 transition">
+     
+                               Book Consultation
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
+    
+         </div>
     </header>
 
     <section id="home" class="hero-bg min-h-screen flex items-center pt-24 md:pt-20">
         <div class="container mx-auto px-6 z-10">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div class="text-center md:text-left">
-                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 reveal">Your Partner in Wealth Creation and Smart Investments.</h1>
+         
+                   <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 reveal">Your Partner in Wealth Creation and Smart Investments.</h1>
                     <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-xl mx-auto md:mx-0 reveal" style="transition-delay: 0.2s;">Helping you grow your financial potential through trusted advisory, innovative insights, and transparent consulting.</p>
                     <div class="flex justify-center md:justify-start space-x-4 reveal" style="transition-delay: 0.4s;">
-                        <a href="#plans" class="bg-teal-500 text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-teal-600 transition-transform transform hover:scale-105">Explore Plans</a>
+     
+                           <a href="#plans" class="bg-teal-500 text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-teal-600 transition-transform transform hover:scale-105">Explore Plans</a>
                         <a href="#contact" class="bg-white text-teal-500 font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-gray-100 transition-transform transform hover:scale-105">Book Consultation</a>
                     </div>
-                </div>
+           
+             </div>
                 <div class="hidden md:flex justify-center items-center reveal" style="transition-delay: 0.3s;">
-                    <img src="https://images.pexels.com/photos/8370752/pexels-photo-8370752.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="A person reviewing financial charts and investment data on a modern tablet" class="rounded-2xl shadow-2xl w-full max-w-lg object-cover">
+                    <lottie-player src="https://lottie.host/804b4292-62b8-472e-836a-2775f28f5228/qJ8uNa2i6t.json" background="transparent" speed="1" style="width: 100%;
+max-width: 500px;" loop autoplay></lottie-player>
                 </div>
             </div>
         </div>
         <div class="absolute bottom-10 left-1/2 -translate-x-1/2">
              <a href="#about" class="scroll-down-arrow">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-teal-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                 </svg>
              </a>
@@ -304,35 +308,43 @@
     
     <section id="about" class="py-20 bg-white">
         <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
+           
+         <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold mb-4 reveal">About Re-Arth Consultancy</h2>
-                <p class="text-gray-600 max-w-3xl mx-auto reveal" style="transition-delay: 0.2s;">Re-Arth Consultancy is a financial and investment advisory firm offering personalized investment strategies, portfolio planning, and financial guidance to individuals and businesses. We focus on trust, transparency, and long-term growth.</p>
+                <p class="text-gray-600 max-w-3xl mx-auto reveal" style="transition-delay: 0.2s;">Re-Arth Consultancy is a financial and investment advisory firm offering personalized investment strategies, portfolio planning, and financial guidance to individuals and businesses.
+We focus on trust, transparency, and long-term growth.</p>
             </div>
             <div class="grid md:grid-cols-3 gap-12 text-center mb-20">
                 <div class="reveal" style="transition-delay: 0.3s;">
                     <div class="p-6 bg-teal-50 rounded-full inline-block mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-teal-500" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                    
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-teal-500" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
                     </div>
                     <h3 class="text-xl font-semibold mb-2">Trust</h3>
-                    <p class="text-gray-500">Building relationships based on reliability and integrity.</p>
+                
+            <p class="text-gray-500">Building relationships based on reliability and integrity.</p>
                 </div>
                 <div class="reveal" style="transition-delay: 0.4s;">
                      <div class="p-6 bg-teal-50 rounded-full inline-block mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-teal-500" viewBox="0 0 20 20" fill="currentColor"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z" /><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.022 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd" /></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 
+text-teal-500" viewBox="0 0 20 20" fill="currentColor"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z" /><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.022 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd" /></svg>
                     </div>
                     <h3 class="text-xl font-semibold mb-2">Transparency</h3>
-                    <p class="text-gray-500">Clear, honest communication in all our advisory services.</p>
+             
+               <p class="text-gray-500">Clear, honest communication in all our advisory services.</p>
                 </div>
                 <div class="reveal" style="transition-delay: 0.5s;">
                      <div class="p-6 bg-teal-50 rounded-full inline-block mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-teal-500" viewBox="0 0 20 20" fill="currentColor"><path d="M2 11h16v2H2z" /><path d="M11 2v16h2V2z" transform="rotate(-45 12 10)" /></svg>
+                        
+<svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-teal-500" viewBox="0 0 20 20" fill="currentColor"><path d="M2 11h16v2H2z" /><path d="M11 2v16h2V2z" transform="rotate(-45 12 10)" /></svg>
                     </div>
                     <h3 class="text-xl font-semibold mb-2">Growth</h3>
                     <p class="text-gray-500">Dedicated to fostering your financial prosperity and success.</p>
-                </div>
+           
+             </div>
             </div>
             
-            <div class="glassmorphism rounded-3xl p-8 md:p-12 gradient-bg reveal">
+            <div class="glassmorphism rounded-3xl p-8 md:p-12 gradient-bg reveal mb-8">
                 <div>
                     <h3 class="text-2xl md:text-3xl font-bold mb-2">Paresh Patel</h3>
                     <p class="text-teal-600 font-semibold mb-4">Founder & Chief Advisor</p>
@@ -346,7 +358,7 @@
                 <div>
                     <h3 class="text-2xl md:text-3xl font-bold mb-2">Rinkal Vora</h3>
                     <p class="text-teal-600 font-semibold mb-4">CO-Founder & Chief Advisor</p>
-                    <p class="text-gray-600 mb-4"Together at Re-Arth Consultancy Services Pvt Ltd, we turn financial goals into achievable milestones.</p>
+                    <p class="text-gray-600 mb-4">Together at Re-Arth Consultancy Services Pvt Ltd, we turn financial goals into achievable milestones.</p>
                     <p class="text-gray-600 mb-6">With trust, transparency, and strategy at our core, we make your money work smarter — year after year.</p>
                     <p class="font-serif text-2xl text-gray-700 italic">Rinkal Vora</p>
                 </div>
@@ -356,261 +368,405 @@
 
     <section id="services" class="py-20 gradient-bg">
         <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
+  
+                  <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold mb-4 reveal">Our Services</h2>
                 <p class="text-gray-600 max-w-3xl mx-auto reveal" style="transition-delay: 0.2s;">We offer a comprehensive suite of financial services designed to meet your unique needs.</p>
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="glassmorphism p-8 rounded-2xl shadow-lg transition-transform transform hover:-translate-y-2 hover:shadow-2xl reveal">
+   
+                     <div class="glassmorphism p-8 rounded-2xl shadow-lg transition-transform transform hover:-translate-y-2 hover:shadow-2xl reveal">
                     <h3 class="text-xl font-bold mb-3">Portfolio Management Services</h3>
-                    <p class="text-gray-600 mb-4">Tailored strategies to build and manage a diversified investment portfolio for long-term growth.</p>
+                    <p class="text-gray-600 mb-4">Tailored strategies to build and manage a diversified investment portfolio for 
+long-term growth.</p>
                     <a href="#plans" class="font-semibold text-teal-600 hover:text-teal-800 transition">Learn More →</a>
                 </div>
                 <div class="glassmorphism p-8 rounded-2xl shadow-lg transition-transform transform hover:-translate-y-2 hover:shadow-2xl reveal" style="transition-delay: 0.1s;">
-                    <h3 class="text-xl font-bold mb-3">Retirement Planning</h3>
+         
+                   <h3 class="text-xl font-bold mb-3">Retirement Planning</h3>
                     <p class="text-gray-600 mb-4">Secure your golden years with our comprehensive retirement planning and investment solutions.</p>
                     <a href="#plans" class="font-semibold text-teal-600 hover:text-teal-800 transition">Learn More →</a>
                 </div>
-                 <div class="glassmorphism p-8 rounded-2xl shadow-lg transition-transform transform hover:-translate-y-2 hover:shadow-2xl reveal" style="transition-delay: 0.2s;">
+         
+                  <div class="glassmorphism p-8 rounded-2xl shadow-lg transition-transform transform hover:-translate-y-2 hover:shadow-2xl reveal" style="transition-delay: 0.2s;">
                     <h3 class="text-xl font-bold mb-3">Financial Planning</h3>
                     <p class="text-gray-600 mb-4">Holistic financial planning to help you achieve your life goals, from education to homeownership.</p>
-                    <a href="#plans" class="font-semibold text-teal-600 hover:text-teal-800 transition">Learn More →</a>
+  
+                          <a href="#plans" class="font-semibold text-teal-600 hover:text-teal-800 transition">Learn More →</a>
                 </div>
                  <div class="glassmorphism p-8 rounded-2xl shadow-lg transition-transform transform hover:-translate-y-2 hover:shadow-2xl reveal" style="transition-delay: 0.3s;">
-                    <h3 class="text-xl font-bold mb-3">Tax Planning</h3>
+           
+                 <h3 class="text-xl font-bold mb-3">Tax Planning</h3>
                     <p class="text-gray-600 mb-4">Optimize your tax strategy and maximize your savings with our expert tax planning advice.</p>
                     <a href="#plans" class="font-semibold text-teal-600 hover:text-teal-800 transition">Learn More →</a>
                 </div>
+                 <div class="glassmorphism p-8 rounded-2xl shadow-lg transition-transform transform hover:-translate-y-2 hover:shadow-2xl reveal" style="transition-delay: 0.4s;">
+                    <h3 class="text-xl font-bold mb-3">Wealth Management</h3>
+                    <p class="text-gray-600 mb-4">Comprehensive strategies to grow, protect, and manage your wealth for generations.</p>
+                    <a href="#plans" class="font-semibold text-teal-600 hover:text-teal-800 transition">Learn More →</a>
                 </div>
+                 <div class="glassmorphism p-8 rounded-2xl shadow-lg transition-transform transform hover:-translate-y-2 hover:shadow-2xl reveal" style="transition-delay: 0.5s;">
+                    <h3 class="text-xl font-bold mb-3">Estate Planning</h3>
+                    <p class="text-gray-600 mb-4">Ensure your legacy is protected with our expert guidance on wills, trusts, and inheritance.</p>
+                    <a href="#plans" class="font-semibold text-teal-600 hover:text-teal-800 transition">Learn More →</a>
+                </div>
+            </div>
         </div>
     </section>
 
     <section id="plans" class="py-20 bg-white">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 reveal">Our Investment Plans</h2>
-                <p class="text-gray-600 max-w-3xl mx-auto reveal" style="transition-delay: 0.2s;">Structured plans designed for clear, compounded returns. Choose the path that aligns with your goals.</p>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 reveal">Our 
+Investment Plans</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto reveal" style="transition-delay: 0.2s;">Structured plans designed for clear, compounded returns.
+Choose the path that aligns with your goals.</p>
                 <div class="mt-8 reveal" style="transition-delay: 0.3s;">
                     <button id="ai-recommender-btn" class="turquoise-gradient-bg text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transition-transform transform hover:scale-105">
                         ✨ Get AI Recommendation
-                    </button>
+              
+              </button>
                 </div>
             </div>
             
-            <div class="flex flex-wrap justify-center gap-8">
-                <div class="w-full max-w-sm bg-white p-8 rounded-2xl shadow-lg border border-gray-200 reveal h-full flex flex-col electric-border" style="--electric-border-color: #40E0D0;" data-plan-name="Plan 1" data-plan-details="Type: EMI Based, Investment: Rs 10,000/month, Return: 30% yearly. Good for beginners starting their investment journey.">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 reveal h-full flex flex-col electric-border" style="--electric-border-color: #40E0D0;"
+data-plan-name="Plan 1" data-plan-details="Type: EMI Based, Investment: Rs 10,000/month, Return: 30% yearly. Good for beginners starting their investment journey.">
                     <div class="eb-layers">
                         <div class="eb-stroke"></div>
                         <div class="eb-glow-1"></div>
-                        <div class="eb-glow-2"></div>
+            
+                    <div class="eb-glow-2"></div>
                         <div class="eb-background-glow"></div>
                     </div>
-                    <div class="eb-content flex flex-col h-full">
-                        <div class="flex-grow">
+                    <div class="eb-content">
+                     
+           <div class="flex-grow">
                             <div class="flex justify-between items-baseline">
                                 <h3 class="text-xl font-bold">Plan 1</h3>
-                                <span class="bg-teal-100 text-teal-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">EMI Based</span>
+                              
+          <span class="bg-teal-100 text-teal-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">EMI Based</span>
                             </div>
                             <p class="text-gray-500 mt-2">Rs 10,000/month</p>
-                            <p class="text-sm text-gray-400 mb-4">(Return Start After Rs 50,000)</p>
+                            <p class="text-sm text-gray-400 
+mb-4">(Return Start After Rs 50,000)</p>
                             <div class="my-6 text-center">
                                 <p class="text-5xl font-bold text-teal-500">30%</p>
-                                <p class="text-gray-600">Yearly Return</p>
+                               
+         <p class="text-gray-600">Yearly Return</p>
                             </div>
                         </div>
                         <a href="#contact" class="w-full text-center bg-gray-200 text-gray-800 font-semibold py-3 px-8 rounded-full hover:bg-gray-300 transition mt-auto">Choose Plan</a>
+        
                     </div>
                 </div>
                 
-                <div class="w-full max-w-sm bg-white p-8 rounded-2xl shadow-lg border border-gray-200 reveal h-full flex flex-col electric-border" style="transition-delay: 0.1s; --electric-border-color: #40E0D0;" data-plan-name="Plan 2" data-plan-details="Type: EMI Based, Investment: Rs 20,000/month, Return: 35-36% yearly. Suitable for those looking to invest a regular amount for steady growth.">
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 reveal h-full flex flex-col electric-border" style="transition-delay: 0.1s;
+--electric-border-color: #40E0D0;" data-plan-name="Plan 2" data-plan-details="Type: EMI Based, Investment: Rs 20,000/month, Return: 35-36% yearly.
+Suitable for those looking to invest a regular amount for steady growth.">
                     <div class="eb-layers">
                         <div class="eb-stroke"></div>
                         <div class="eb-glow-1"></div>
-                        <div class="eb-glow-2"></div>
+                  
+              <div class="eb-glow-2"></div>
                         <div class="eb-background-glow"></div>
                     </div>
-                     <div class="eb-content flex flex-col h-full">
+                     <div class="eb-content">
                         <div class="flex-grow">
-                            <div class="flex justify-between items-baseline">
+ 
+                                   <div class="flex justify-between items-baseline">
                                 <h3 class="text-xl font-bold">Plan 2</h3>
-                                <span class="bg-teal-100 text-teal-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">EMI Based</span>
+                                <span class="bg-teal-100 text-teal-800 
+text-xs font-semibold px-2.5 py-0.5 rounded-full">EMI Based</span>
                             </div>
                             <p class="text-gray-500 mt-2">Rs 20,000/month</p>
                             <p class="text-sm text-gray-400 mb-4">(Return Start After Rs 100,000)</p>
-                            <div class="my-6 text-center">
+ 
+                                   <div class="my-6 text-center">
                                 <p class="text-5xl font-bold text-teal-500">35-36%</p>
                                 <p class="text-gray-600">Yearly Return</p>
-                            </div>
+  
+                                  </div>
                         </div>
                         <a href="#contact" class="w-full text-center bg-gray-200 text-gray-800 font-semibold py-3 px-8 rounded-full hover:bg-gray-300 transition mt-auto">Choose Plan</a>
-                    </div>
+             
+               </div>
                 </div>
 
-                <div class="w-full max-w-sm plan-card-popular relative reveal h-full flex flex-col" style="transition-delay: 0.2s;" data-plan-name="Plan 3" data-plan-details="Type: One Time, Investment: Rs 1–3 lakh, Return: 45% yearly. A popular choice for a significant one-time investment with high returns.">
+                <div class="plan-card-popular relative reveal h-full flex flex-col" style="transition-delay: 0.2s;" data-plan-name="Plan 3" data-plan-details="Type: One Time, Investment: Rs 1–3 lakh, Return: 45% yearly.
+A popular choice for a significant one-time investment with high returns.">
                     <div class="electric-border turquoise-gradient-bg text-white p-8 rounded-2xl shadow-lg h-full" style="--electric-border-color: #FFFFFF;">
                          <div class="eb-layers">
                             <div class="eb-stroke"></div>
-                            <div class="eb-glow-1"></div>
+      
+                              <div class="eb-glow-1"></div>
                             <div class="eb-glow-2"></div>
                             <div class="eb-background-glow"></div>
-                        </div>
-                        <div class="eb-content flex flex-col h-full">
+                   
+             </div>
+                        <div class="eb-content">
                             <span class="absolute top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 bg-yellow-400 text-gray-800 text-sm font-bold px-4 py-1 rounded-full">POPULAR</span>
-                             <div class="flex-grow">
+                             <div 
+class="flex-grow">
                                 <div class="flex justify-between items-baseline">
                                     <h3 class="text-xl font-bold">Plan 3</h3>
-                                    <span class="bg-white/20 text-white text-xs font-semibold px-2.5 py-0.5 rounded-full">One Time</span>
+                          
+                  <span class="bg-white/20 text-white text-xs font-semibold px-2.5 py-0.5 rounded-full">One Time</span>
                                 </div>
                                 <p class="opacity-80 mt-2">Investment: Rs 1–3 lakh</p>
-                                <div class="my-10 text-center">
+             
+                                   <div class="my-10 text-center">
                                     <p class="text-5xl font-bold">45%</p>
                                     <p class="opacity-90">Yearly Return</p>
-                                </div>
+   
+                                     </div>
                             </div>
                             <a href="#contact" class="w-full text-center bg-white text-teal-600 font-semibold py-3 px-8 rounded-full hover:bg-gray-100 transition mt-auto">Choose Plan</a>
-                        </div>
+  
+                              </div>
                     </div>
                 </div>
 
-                <div class="w-full max-w-sm bg-white p-8 rounded-2xl shadow-lg border border-gray-200 reveal h-full flex flex-col electric-border" style="transition-delay: 0.3s; --electric-border-color: #3b82f6;" data-plan-name="Plan 4" data-plan-details="Type: One Time, Investment: Rs 3–5 lakh, Return: 55% yearly. Designed for larger one-time investments targeting substantial growth.">
+                <div class="bg-white p-8 rounded-2xl shadow-lg border 
+border-gray-200 reveal h-full flex flex-col electric-border lg:col-start-2" style="transition-delay: 0.3s; --electric-border-color: #3b82f6;" data-plan-name="Plan 4" data-plan-details="Type: One Time, Investment: Rs 3–5 lakh, Return: 55% yearly.
+Designed for larger one-time investments targeting substantial growth.">
                     <div class="eb-layers">
                         <div class="eb-stroke"></div>
                         <div class="eb-glow-1"></div>
-                        <div class="eb-glow-2"></div>
+                      
+          <div class="eb-glow-2"></div>
                         <div class="eb-background-glow"></div>
                     </div>
-                    <div class="eb-content flex flex-col h-full">
+                     <div class="eb-content">
                         <div class="flex-grow">
-                            <div class="flex justify-between items-baseline">
+     
+                               <div class="flex justify-between items-baseline">
                                 <h3 class="text-xl font-bold">Plan 4</h3>
-                                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">One Time</span>
+                                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 
+rounded-full">One Time</span>
                             </div>
                             <p class="text-gray-500 mt-2">Investment: Rs 3–5 lakh</p>
                             <div class="my-10 text-center">
+        
                                 <p class="text-5xl font-bold text-teal-500">55%</p>
                                 <p class="text-gray-600">Yearly Return</p>
                             </div>
-                        </div>
+           
+                     </div>
                         <a href="#contact" class="w-full text-center bg-gray-200 text-gray-800 font-semibold py-3 px-8 rounded-full hover:bg-gray-300 transition mt-auto">Choose Plan</a>
                     </div>
                 </div>
 
-                <div class="w-full max-w-sm bg-white p-8 rounded-2xl shadow-lg border border-gray-200 reveal h-full flex flex-col electric-border" style="transition-delay: 0.4s; --electric-border-color: #8b5cf6;" data-plan-name="Plan 5" data-plan-details="Type: Premium Plan - One Time, Investment: Rs 5 lakh+, Return: 70% yearly. The premium option for maximum returns on a significant investment.">
+              
+          <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 reveal h-full flex flex-col electric-border" style="transition-delay: 0.4s;
+--electric-border-color: #8b5cf6;" data-plan-name="Plan 5" data-plan-details="Type: Premium Plan - One Time, Investment: Rs 5 lakh+, Return: 70% yearly.
+The premium option for maximum returns on a significant investment.">
                     <div class="eb-layers">
                         <div class="eb-stroke"></div>
                         <div class="eb-glow-1"></div>
-                        <div class="eb-glow-2"></div>
+                    
+            <div class="eb-glow-2"></div>
                         <div class="eb-background-glow"></div>
                     </div>
-                    <div class="eb-content flex flex-col h-full">
+                     <div class="eb-content">
                         <div class="flex-grow">
-                            <div class="flex justify-between items-baseline">
+   
+                                 <div class="flex justify-between items-baseline">
                                 <h3 class="text-xl font-bold">Plan 5</h3>
-                                <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Premium</span>
+                                <span class="bg-purple-100 text-purple-800 text-xs font-semibold 
+px-2.5 py-0.5 rounded-full">Premium</span>
                             </div>
                             <p class="text-gray-500 mt-2">Investment: Rs 5 lakh+</p>
                             <div class="my-10 text-center">
-                                <p class="text-5xl font-bold text-teal-500">70%</p>
+       
+                                 <p class="text-5xl font-bold text-teal-500">70%</p>
                                 <p class="text-gray-600">Yearly Return</p>
                             </div>
-                        </div>
+          
+                      </div>
                         <a href="#contact" class="w-full text-center bg-gray-200 text-gray-800 font-semibold py-3 px-8 rounded-full hover:bg-gray-300 transition mt-auto">Choose Plan</a>
                     </div>
                 </div>
             </div>
 
-
-            <div class="mt-24">
+ 
+                   <div class="mt-24">
                 <div class="text-center mb-12">
                     <h3 class="text-2xl md:text-3xl font-bold reveal">Why Trust Re-Arth Consultancy?</h3>
                 </div>
-                <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
+          
+              <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
                     <div class="flex items-start reveal">
                         <svg class="w-6 h-6 text-green-500 mr-3 shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                        <div>
+           
+                     <div>
                             <h4 class="font-semibold">Fixed compounded yearly returns</h4>
                             <p class="text-gray-600">Choose a plan that aligns with your financial goals.</p>
-                        </div>
+                  
+              </div>
                     </div>
                     <div class="flex items-start reveal" style="transition-delay: 0.1s;">
-                        <svg class="w-6 h-6 text-green-500 mr-3 shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <svg class="w-6 h-6 text-green-500 mr-3 shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 
+9 9 0 0118 0z"></path></svg>
                         <div>
                             <h4 class="font-semibold">Best yearly returns + Attractive Gifts</h4>
                             <p class="text-gray-600">Maximizing your gains with added benefits.</p>
-                        </div>
+    
+                            </div>
                     </div>
                     <div class="flex items-start reveal" style="transition-delay: 0.2s;">
-                        <svg class="w-6 h-6 text-green-500 mr-3 shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <svg class="w-6 h-6 text-green-500 mr-3 shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 
+24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                         <div>
                             <h4 class="font-semibold">Transparent structure with secure capital</h4>
-                            <p class="text-gray-600">Clarity and security are at the core of our services.</p>
+                         
+           <p class="text-gray-600">Clarity and security are at the core of our services.</p>
                         </div>
                     </div>
                     <div class="flex items-start reveal" style="transition-delay: 0.3s;">
-                        <svg class="w-6 h-6 text-green-500 mr-3 shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                  
+              <svg class="w-6 h-6 text-green-500 mr-3 shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                         <div>
                             <h4 class="font-semibold">Expert guidance for all investors</h4>
-                            <p class="text-gray-600">For both low-risk and growth-oriented strategies.</p>
+        
+                                  <p class="text-gray-600">For both low-risk and growth-oriented strategies.</p>
                         </div>
                     </div>
                     <div class="flex items-start reveal" style="transition-delay: 0.4s;">
-                        <svg class="w-6 h-6 text-green-500 mr-3 shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+     
+                           <svg class="w-6 h-6 text-green-500 mr-3 shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                         <div>
-                            <h4 class="font-semibold">100% legal, contract-based income plans</h4>
+                            
+<h4 class="font-semibold">100% legal, contract-based income plans</h4>
                             <p class="text-gray-600">Formalized and secure investment frameworks.</p>
                         </div>
                     </div>
-                    <div class="flex items-start reveal" style="transition-delay: 0.5s;">
+                  
+          <div class="flex items-start reveal" style="transition-delay: 0.5s;">
                         <svg class="w-6 h-6 text-green-500 mr-3 shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                         <div>
-                            <h4 class="font-semibold">Trusted by professionals</h4>
+                
+                    <h4 class="font-semibold">Trusted by professionals</h4>
                             <p class="text-gray-600">Working professionals, business owners & retired investors.</p>
                         </div>
                     </div>
-                </div>
+      
+                  </div>
             </div>
 
+        </div>
+    </section>
+
+    <section id="calculator" class="py-20 gradient-bg">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 reveal">Simple Return Calculator</h2>
+   
+                     <p class="text-gray-600 max-w-3xl mx-auto reveal" style="transition-delay: 0.2s;">This tool calculates returns based on a fixed monthly interest rate on your principal amount.
+It shows your potential monthly earnings, the total return over the investment period, and the final amount you'll receive.</p>
+            </div>
+            <div class="glassmorphism rounded-3xl p-8 md:p-12">
+                <div class="grid md:grid-cols-5 gap-8 md:gap-12 items-center">
+                    <div class="md:col-span-3 space-y-8 reveal">
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+  
+                                     <label for="investment-slider" class="font-semibold text-gray-700">Investment Amount (₹)</label>
+                                <input type="text" id="investment-input" class="font-bold text-lg text-teal-600 bg-transparent text-right border-0 focus:outline-none focus:ring-2 focus:ring-teal-200 rounded-md p-1 w-48">
+                   
+                 </div>
+                            <input type="range" min="10000" max="10000000" value="100000" step="10000" id="investment-slider" class="slider-track w-full">
+                        </div>
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <label for="return-slider" class="font-semibold text-gray-700">Monthly Interest Rate (%)</label>
+         
+                               <input type="text" id="return-input" class="font-bold text-lg text-teal-600 bg-transparent text-right border-0 focus:outline-none focus:ring-2 focus:ring-teal-200 rounded-md p-1 w-24">
+                            </div>
+                            <input type="range" min="1" max="20" value="10" step="0.5" id="return-slider" 
+class="slider-track w-full">
+                        </div>
+                        <div>
+                       
+             <div class="flex justify-between items-center mb-2">
+                                <label for="time-slider" class="font-semibold text-gray-700">Investment Duration (Months)</label>
+                                <input type="text" id="time-input" class="font-bold text-lg text-teal-600 bg-transparent text-right border-0 focus:outline-none focus:ring-2 focus:ring-teal-200 rounded-md p-1 w-32">
+        
+                            </div>
+                            <input type="range" min="1" max="60" value="12" id="time-slider" class="slider-track w-full">
+                        </div>
+                    </div>
+ 
+                           <div class="md:col-span-2 space-y-6 text-center md:text-left reveal" style="transition-delay: 0.3s;">
+                        <div>
+                          
+          <p class="text-gray-600 mb-1">Monthly Return</p>
+                            <h3 id="monthly-return" class="text-3xl font-bold text-gray-800 transition-all duration-300">₹0</h3>
+                        </div>
+                        <div>
+             
+                       <p class="text-gray-600 mb-1">Total Return</p>
+                            <h3 id="total-return" class="text-3xl font-bold text-gray-800 transition-all duration-300">₹0</h3>
+                        </div>
+                        
+<div class="mt-4 pt-4 border-t border-teal-200">
+                            <p class="text-gray-600 mb-1">Total Amount <span class="text-sm">(Principal + Return)</span></p>
+                            <h3 id="total-amount" class="text-4xl md:text-5xl font-bold text-teal-600 transition-all duration-300">₹0</h3>
+                        </div>
+  
+                          </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <section id="why-choose-us" class="py-20 bg-white">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 reveal">Why Re-Arth Consultancy?</h2>
+ 
+                       <h2 class="text-3xl md:text-4xl font-bold mb-4 reveal">Why Re-Arth Consultancy?</h2>
                 <p class="text-gray-600 max-w-3xl mx-auto reveal" style="transition-delay: 0.2s;">We are committed to providing exceptional value and building lasting relationships.</p>
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-                <div class="text-center p-6 reveal">
+                <div 
+class="text-center p-6 reveal">
                     <h3 class="text-xl font-semibold mb-2">Personalized Strategies</h3>
-                    <p class="text-gray-600">No one-size-fits-all. We tailor every plan to your unique financial situation and goals.</p>
+                    <p class="text-gray-600">No one-size-fits-all.
+We tailor every plan to your unique financial situation and goals.</p>
                 </div>
                 <div class="text-center p-6 reveal" style="transition-delay: 0.1s;">
                     <h3 class="text-xl font-semibold mb-2">Transparency & Ethics</h3>
-                    <p class="text-gray-600">Our advice is always unbiased and in your best interest. We believe in complete transparency.</p>
+                    <p class="text-gray-600">Our advice is always unbiased and in 
+your best interest. We believe in complete transparency.</p>
                 </div>
                 <div class="text-center p-6 reveal" style="transition-delay: 0.2s;">
                     <h3 class="text-xl font-semibold mb-2">Expert Financial Advisors</h3>
-                    <p class="text-gray-600">Our team comprises seasoned professionals with deep market knowledge and expertise.</p>
+                    <p class="text-gray-600">Our team comprises seasoned professionals with deep market knowledge and 
+expertise.</p>
                 </div>
                 <div class="text-center p-6 reveal" style="transition-delay: 0.3s;">
                     <h3 class="text-xl font-semibold mb-2">Long-Term Wealth Focus</h3>
                     <p class="text-gray-600">We focus on sustainable, long-term growth to help you build lasting wealth.</p>
-                </div>
+      
+                  </div>
             </div>
             <div class="flex flex-wrap justify-center gap-8 md:gap-16 text-center">
                 <div class="reveal">
                     <p class="text-4xl font-bold text-teal-500 counter" data-target="150">0</p>
-                    <p class="text-gray-600">Happy Clients</p>
+                  
+          <p class="text-gray-600">Happy Clients</p>
                 </div>
                 <div class="reveal" style="transition-delay: 0.1s;">
                     <p class="text-4xl font-bold text-teal-500 counter" data-target="10">0</p>
                     <p class="text-gray-600">Years of Expertise</p>
-                </div>
+             
+           </div>
                 <div class="reveal" style="transition-delay: 0.2s;">
                     <p class="text-4xl font-bold text-teal-500 counter" data-target="300">0</p>
                     <p class="text-gray-600">Plans Delivered</p>
                 </div>
-                 <div class="reveal" style="transition-delay: 0.3s;">
+               
+          <div class="reveal" style="transition-delay: 0.3s;">
                     <p class="text-4xl font-bold text-teal-500 counter" data-target="98">0</p>
                     <p class="text-gray-600">% Client Satisfaction</p>
                 </div>
@@ -622,20 +778,24 @@
         <div class="container mx-auto px-6">
             <div class="text-center mb-12">
                 <h2 class="text-3xl md:text-4xl font-bold mb-4 reveal">✨ AI-Powered Market Insights</h2>
-                <p class="text-gray-600 max-w-3xl mx-auto reveal" style="transition-delay: 0.2s;">Get a real-time snapshot of the Indian financial market, powered by Gemini. Click the button to generate today's summary.</p>
+                <p class="text-gray-600 max-w-3xl mx-auto reveal" style="transition-delay: 0.2s;">Get a real-time snapshot of the Indian financial market, powered by Gemini.
+Click the button to generate today's summary.</p>
             </div>
             <div class="max-w-3xl mx-auto text-center">
                 <button id="generate-insights-btn" class="turquoise-gradient-bg text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transition-transform transform hover:scale-105 reveal">
                     Generate Today's Market Snapshot
-                </button>
+               
+         </button>
                 <div id="insights-result-container" class="mt-8 text-left glassmorphism p-8 rounded-2xl shadow-lg hidden reveal">
                     <div id="insights-loader" class="hidden my-4 text-center">
                         <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-teal-500 mx-auto"></div>
-                        <p class="mt-2 text-gray-600">Generating today's insights...</p>
+                   
+             <p class="mt-2 text-gray-600">Generating today's insights...</p>
                     </div>
                     <div id="insights-content"></div>
                     <p class="text-xs text-gray-500 mt-6 text-center italic">Disclaimer: This content is AI-generated for informational purposes and should not be considered financial advice.</p>
-                </div>
+           
+             </div>
             </div>
         </div>
     </section>
@@ -644,77 +804,96 @@
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold mb-4 reveal">What Our Clients Say</h2>
+        
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="bg-gray-50 p-8 rounded-2xl shadow-md reveal">
-                    <p class="text-gray-600 mb-6">"Re-Arth Consultancy transformed my approach to investing. Their advice is clear, practical, and has delivered great results. Highly recommended!"</p>
+                    <p class="text-gray-600 mb-6">"Re-Arth Consultancy transformed my approach to investing.
+Their advice is clear, practical, and has delivered great results.
+Highly recommended!"</p>
                     <div class="flex items-center">
                         <div>
                             <p class="font-bold">Anjali Sharma</p>
-                            <div class="flex text-yellow-400">★★★★★</div>
+                       
+             <div class="flex text-yellow-400">★★★★★</div>
                         </div>
                     </div>
                 </div>
                  <div class="bg-gray-50 p-8 rounded-2xl shadow-md reveal" style="transition-delay: 0.1s;">
-                    <p class="text-gray-600 mb-6">"The team is professional, knowledgeable, and genuinely cares about my financial well-being. I finally feel in control of my finances."</p>
+                    <p class="text-gray-600 mb-6">"The team is professional, knowledgeable, and genuinely cares about my financial well-being.
+I finally feel in control of my finances."</p>
                     <div class="flex items-center">
                         <div>
                             <p class="font-bold">Rohan Verma</p>
-                            <div class="flex text-yellow-400">★★★★★</div>
+                 
+                   <div class="flex text-yellow-400">★★★★★</div>
                         </div>
                     </div>
                 </div>
                  <div class="bg-gray-50 p-8 rounded-2xl shadow-md reveal" style="transition-delay: 0.2s;">
-                    <p class="text-gray-600 mb-6">"Their retirement plan was exactly what I needed. Transparent, effective, and tailored to my future goals. Thank you, Re-Arth!"</p>
+                    <p class="text-gray-600 mb-6">"Their retirement plan was exactly what I needed.
+Transparent, effective, and tailored to my future goals. Thank you, Re-Arth!"</p>
                     <div class="flex items-center">
                         <div>
                             <p class="font-bold">Priya Singh</p>
-                            <div class="flex text-yellow-400">★★★★★</div>
+              
+                      <div class="flex text-yellow-400">★★★★★</div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    
+</section>
 
     <section class="py-20 turquoise-gradient-bg text-white">
         <div class="container mx-auto px-6 text-center">
             <h2 class="text-3xl md:text-4xl font-bold mb-4 reveal">Ready to Build Your Financial Future?</h2>
             <p class="text-lg opacity-90 mb-8 max-w-2xl mx-auto reveal" style="transition-delay: 0.2s;">Connect with us today to start your journey toward smarter investing and lasting growth.</p>
             <div class="flex justify-center space-x-4 reveal" style="transition-delay: 0.4s;">
-                <a href="#contact" class="bg-white text-teal-600 font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-gray-100 transition-transform transform hover:scale-105">Book Consultation</a>
+ 
+                       <a href="#contact" class="bg-white text-teal-600 font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-gray-100 transition-transform transform hover:scale-105">Book Consultation</a>
                 <a href="#plans" class="border-2 border-white text-white font-semibold py-3 px-8 rounded-full hover:bg-white hover:text-teal-600 transition-transform transform hover:scale-105">View Plans</a>
             </div>
         </div>
     </section>
 
     <section id="contact" class="py-20 bg-white">
-        <div class="container mx-auto px-6">
+    
+            <div class="container mx-auto px-6">
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold mb-4 reveal">Get in Touch</h2>
-                <p class="text-gray-600 max-w-3xl mx-auto reveal" style="transition-delay: 0.2s;">We're here to help. Reach out to us for any queries or to book a consultation.</p>
+                <p class="text-gray-600 max-w-3xl mx-auto reveal" style="transition-delay: 0.2s;">We're here to help.
+Reach out to us for any queries or to book a consultation.</p>
             </div>
             <div class="grid md:grid-cols-2 gap-12">
                 <div class="reveal">
                     <form id="contact-form" class="space-y-6">
-                        <input type="text" placeholder="Your Name" class="w-full p-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-400 transition" required>
+                       
+         <input type="text" placeholder="Your Name" class="w-full p-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-400 transition" required>
                         <input type="email" placeholder="Your Email" class="w-full p-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-400 transition" required>
                         <input type="tel" placeholder="Your Phone" class="w-full p-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-400 transition">
-                        <textarea placeholder="Your Message" rows="5" class="w-full p-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-400 transition" required></textarea>
+             
+                   <textarea placeholder="Your Message" rows="5" class="w-full p-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-400 transition" required></textarea>
                         <button type="submit" class="w-full bg-teal-500 text-white font-semibold py-4 px-8 rounded-lg shadow-lg hover:bg-teal-600 transition disabled:opacity-50">Send Message</button>
                     </form>
-                    <div id="form-success-message" class="hidden mt-4 text-center p-4 rounded-lg bg-teal-100 text-teal-800 border border-teal-200">
-                        Thank you! Your message has been sent successfully.
+                   
+         <div id="form-success-message" class="hidden mt-4 text-center p-4 rounded-lg bg-teal-100 text-teal-800 border border-teal-200">
+                        Thank you!
+Your message has been sent successfully.
                     </div>
                 </div>
                 <div class="reveal" style="transition-delay: 0.2s;">
                     <div class="space-y-6 text-lg">
-                        <p class="flex items-start"><span class="mt-1 mr-4 text-teal-500">📍</span><span>504, Saffron tower , opp. Centro mall ,ambawadi circle, Ahmedabad, India 380006</span></p>
+                        <p class="flex items-start"><span class="mt-1 mr-4 text-teal-500">📍</span><span>504, Saffron tower , opp.
+Centro mall ,ambawadi circle, Ahmedabad, India 380006</span></p>
                         <p class="flex items-center"><span class="mr-4 text-teal-500">📞</span><a href="tel:+917862064335" class="hover:underline">+91 7862064335</a></p>
                         <p class="flex items-center"><span class="mr-4 text-teal-500">✉️</span><a href="mailto:info@re-arthconsultancy.com" class="hover:underline">info@re-arthconsultancy.com</a></p>
                     </div>
-                    <div class="mt-8">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.936383347207!2d72.5519840153835!3d23.02613532210086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e84f33a92540d%3A0x6739420083e95579!2sAmbawadi%20Cir%2C%20Ambawadi%2C%20Ahmedabad%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1676885331390!5m2!1sen!2sin" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="rounded-lg shadow-md"></iframe>
+             
+               <div class="mt-8">
+                        <iframe src="http://googleusercontent.com/maps/google.com/0" width="100%" height="250" style="border:0;"
+allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="rounded-lg shadow-md"></iframe>
                     </div>
                 </div>
             </div>
@@ -723,49 +902,59 @@
 
     <footer class="bg-gray-800 text-white py-12">
         <div class="container mx-auto px-6 text-center">
-            <a href="#home">
-                <img src="https://i.ibb.co/3YNPrM1T/image.png" alt="Re-Arth Consultancy Logo" class="h-16 mx-auto mb-6">
+           
+         <a href="#home">
+                <img src="https://re-arthconsultancy.com/wp-content/uploads/2022/02/Re-Arth-Logo-2-edited-300x200.jpg" alt="Re-Arth Consultancy Logo" class="h-16 mx-auto mb-6">
             </a>
             <nav class="flex justify-center flex-wrap space-x-6 my-6">
                 <a href="#home" class="hover:text-teal-400 transition">Home</a>
                 <a href="#about" class="hover:text-teal-400 transition">About</a>
+        
                 <a href="#services" class="hover:text-teal-400 transition">Services</a>
                 <a href="#plans" class="hover:text-teal-400 transition">Plans</a>
                 <a href="#contact" class="hover:text-teal-400 transition">Contact</a>
                 <a href="privacy-policy.html" class="hover:text-teal-400 transition">Privacy Policy</a>
             </nav>
-            <p class="text-gray-400">© 2025 Re-Arth Consultancy. All Rights Reserved.</p>
+            <p class="text-gray-400">©
+2025 Re-Arth Consultancy. All Rights Reserved.</p>
         </div>
     </footer>
     
     <div id="ai-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-center p-4">
         <div class="bg-white rounded-2xl shadow-2xl p-8 max-w-lg w-full relative transform transition-all duration-300 scale-95 opacity-0" id="ai-modal-content">
             <button id="close-ai-modal" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600">×</button>
-            <h3 class="text-2xl font-bold mb-6 text-center">✨ Find Your Perfect Plan</h3>
+            <h3 class="text-2xl font-bold mb-6 text-center">✨ 
+Find Your Perfect Plan</h3>
             <div id="ai-form">
                 <div class="space-y-4">
                     <div>
                         <label for="investment-goal" class="block text-sm font-medium text-gray-700 mb-1">What is your primary investment goal?</label>
-                        <input type="text" id="investment-goal" placeholder="e.g., Buy a house in 5 years, save for retirement" class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-400 transition">
+            
+                    <input type="text" id="investment-goal" placeholder="e.g., Buy a house in 5 years, save for retirement" class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-400 transition">
                     </div>
                     <div>
-                        <label for="risk-tolerance" class="block text-sm font-medium text-gray-700 mb-1">What is your risk tolerance?</label>
+                        <label for="risk-tolerance" class="block 
+text-sm font-medium text-gray-700 mb-1">What is your risk tolerance?</label>
                         <select id="risk-tolerance" class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-400 transition">
                             <option>Low - I prefer safer, stable returns.</option>
-                            <option>Medium - I'm willing to take some risks for better returns.</option>
+                         
+           <option>Medium - I'm willing to take some risks for better returns.</option>
                             <option>High - I'm comfortable with high risk for the highest possible returns.</option>
                         </select>
                     </div>
-                </div>
+    
+                    </div>
                 <button id="get-suggestion-btn" class="w-full mt-6 bg-teal-500 text-white font-semibold py-3 px-8 rounded-lg shadow-lg hover:bg-teal-600 transition disabled:opacity-50">Get Suggestion</button>
             </div>
             <div id="ai-result" class="hidden text-center">
                 <div id="ai-loader" class="hidden my-4">
-                    <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-teal-500 mx-auto"></div>
+            
+                <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-teal-500 mx-auto"></div>
                     <p class="mt-2 text-gray-600">Analyzing your details...</p>
                 </div>
                 <div id="ai-recommendation"></div>
-                <button id="ai-reset-btn" class="w-full mt-6 bg-gray-200 text-gray-800 font-semibold py-3 px-8 rounded-lg hover:bg-gray-300 transition">Start Over</button>
+                <button id="ai-reset-btn" class="w-full mt-6 bg-gray-200 text-gray-800 font-semibold py-3 px-8 rounded-lg hover:bg-gray-300 transition">Start 
+Over</button>
             </div>
         </div>
     </div>
@@ -778,150 +967,153 @@
 
 
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
+       
+         document.addEventListener('DOMContentLoaded', () => {
             // Preloader logic: Fade out and then remove
             const preloader = document.getElementById('preloader');
-            if (preloader) {
+if (preloader) {
                 // Start the fade out transition
                 preloader.style.opacity = '0';
-                // After the transition completes (500ms), set display to none
+// After the transition completes (500ms), set display to none
                 setTimeout(() => {
                     if (preloader) {
                         preloader.style.display = 'none';
                     }
-                }, 500);
-            }
+     
+                   }, 500);
+}
 
             // Sticky Navigation
             const navContainer = document.getElementById('nav-container');
-            if (navContainer) {
+if (navContainer) {
                  window.addEventListener('scroll', () => {
                     if (window.scrollY > 50) {
                         navContainer.classList.add('bg-white/50', 'max-w-4xl', 'rounded-2xl', 'border', 'border-gray-200', 'backdrop-blur-lg', 'shadow-md');
-                        navContainer.classList.remove('max-w-6xl');
+                        
+navContainer.classList.remove('max-w-6xl');
                     } else {
                         navContainer.classList.remove('bg-white/50', 'max-w-4xl', 'rounded-2xl', 'border', 'border-gray-200', 'backdrop-blur-lg', 'shadow-md');
                         navContainer.classList.add('max-w-6xl');
                     }
-                });
-            }
+    
+                    });
+}
 
             // Intersection Observer for reveal animations
             const revealElements = document.querySelectorAll('.reveal');
-            const revealObserver = new IntersectionObserver((entries) => {
+const revealObserver = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('visible');
                     }
-                });
+          
+              });
             }, { threshold: 0.1 });
-
-            revealElements.forEach(el => {
+revealElements.forEach(el => {
                 revealObserver.observe(el);
             });
-
-            // Counter animation
+// Counter animation
             const counters = document.querySelectorAll('.counter');
-            const speed = 200; // The lower the slower
+const speed = 200; // The lower the slower
             
             const animateCounter = (counter) => {
                 const target = +counter.getAttribute('data-target');
-                let count = 0;
+let count = 0;
 
                 const updateCount = () => {
                     const increment = target / speed;
-                    count += increment;
+count += increment;
 
                     if (count < target) {
                         counter.innerText = Math.ceil(count);
-                        setTimeout(updateCount, 10);
+setTimeout(updateCount, 10);
                     } else {
                         counter.innerText = target + (counter.innerText.includes('%') ? '%' : '+');
-                    }
+}
                 };
                 updateCount();
             };
-
-            const counterObserver = new IntersectionObserver((entries, observer) => {
+const counterObserver = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         animateCounter(entry.target);
                         observer.unobserve(entry.target);
-                    }
+     
+                       }
                 });
             }, { threshold: 0.5 });
-            
-            counters.forEach(counter => {
+counters.forEach(counter => {
                 counterObserver.observe(counter);
             });
-            
-             // Scroll to top button
+// Scroll to top button
             const scrollTopBtn = document.getElementById('scrollTopBtn');
-            window.onscroll = function() {
+window.onscroll = function() {
                 if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
                     scrollTopBtn.style.display = "flex";
-                } else {
+} else {
                     scrollTopBtn.style.display = "none";
-                }
+}
             };
-            scrollTopBtn.addEventListener('click', () => {
+scrollTopBtn.addEventListener('click', () => {
                 const homeElement = document.querySelector('#home');
                 if (homeElement) {
                     window.scrollTo({
                         top: 0,
-                        behavior: 'smooth'
+               
+                 behavior: 'smooth'
                     });
                 }
             });
-
-            // Corrected Mobile Menu Logic
+// Corrected Mobile Menu Logic
             const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenuContent = document.getElementById('mobile-menu-content');
+const mobileMenuContent = document.getElementById('mobile-menu-content');
             const hamburgerIcon = document.getElementById('hamburger-icon');
             const closeIcon = document.getElementById('close-icon');
-
-            const toggleMenu = () => {
+const toggleMenu = () => {
                 if(mobileMenuContent && hamburgerIcon && closeIcon) {
                     mobileMenuContent.classList.toggle('hidden');
-                    hamburgerIcon.classList.toggle('hidden');
+hamburgerIcon.classList.toggle('hidden');
                     closeIcon.classList.toggle('hidden');
                 }
             };
-
-            if(mobileMenuButton) {
+if(mobileMenuButton) {
                 mobileMenuButton.addEventListener('click', toggleMenu);
-            }
+}
 
             // Smooth scrolling for all anchor links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
                     const href = this.getAttribute('href');
                     const targetElement = document.querySelector(href);
-                    
+   
+                         
                     if (targetElement) {
                         e.preventDefault();
 
                         // Close mobile menu if it's open
-                        if (mobileMenuContent && !mobileMenuContent.classList.contains('hidden')) {
+       
+                         if (mobileMenuContent && !mobileMenuContent.classList.contains('hidden')) {
                            toggleMenu();
                         }
                         
-                        const header = document.getElementById('header');
+    
+                            const header = document.getElementById('header');
                         const headerOffset = header ? header.offsetHeight : 0;
                         const elementPosition = targetElement.offsetTop;
-                        const offsetPosition = elementPosition - headerOffset;
+                   
+             const offsetPosition = elementPosition - headerOffset;
 
                         window.scrollTo({
                             top: offsetPosition,
                             behavior: "smooth"
+        
                         });
-                    }
+}
                 });
             });
-
-            // Contact Form Submission
+// Contact Form Submission
             const contactForm = document.getElementById('contact-form');
-            const successMessage = document.getElementById('form-success-message');
+const successMessage = document.getElementById('form-success-message');
             
             contactForm.addEventListener('submit', (e) => {
                 e.preventDefault();
@@ -930,48 +1122,50 @@
                 submitButton.innerText = 'Sending...';
 
                 // Simulate a network request
-                setTimeout(() => {
+  
+                      setTimeout(() => {
                     successMessage.classList.remove('hidden');
                     contactForm.reset();
                     submitButton.disabled = false;
-                    submitButton.innerText = 'Send Message';
+                    submitButton.innerText = 
+'Send Message';
 
                     // Hide success message after a few seconds
                     setTimeout(() => {
                         successMessage.classList.add('hidden');
                     }, 4000);
-                }, 1000);
+     
+                   }, 1000);
             });
-
-            // --- AI Recommender Logic ---
+// --- AI Recommender Logic ---
             const aiModal = document.getElementById('ai-modal');
-            const aiModalContent = document.getElementById('ai-modal-content');
+const aiModalContent = document.getElementById('ai-modal-content');
             const openAiModalBtn = document.getElementById('ai-recommender-btn');
             const closeAiModalBtn = document.getElementById('close-ai-modal');
             const getSuggestionBtn = document.getElementById('get-suggestion-btn');
             const aiForm = document.getElementById('ai-form');
-            const aiResult = document.getElementById('ai-result');
+const aiResult = document.getElementById('ai-result');
             const aiLoader = document.getElementById('ai-loader');
             const aiRecommendation = document.getElementById('ai-recommendation');
             const aiResetBtn = document.getElementById('ai-reset-btn');
-
-            const openModal = () => {
+const openModal = () => {
                 aiModal.classList.remove('hidden');
-                setTimeout(() => {
+setTimeout(() => {
                     aiModalContent.classList.remove('scale-95', 'opacity-0');
                 }, 10);
-            };
+};
 
             const closeModal = () => {
                 aiModalContent.classList.add('scale-95', 'opacity-0');
-                setTimeout(() => {
+setTimeout(() => {
                     aiModal.classList.add('hidden');
                     // Reset form for next time
                     aiForm.classList.remove('hidden');
                     aiResult.classList.add('hidden');
-                    aiRecommendation.innerHTML = '';
+             
+               aiRecommendation.innerHTML = '';
                 }, 300);
-            };
+};
 
             openAiModalBtn.addEventListener('click', openModal);
             closeAiModalBtn.addEventListener('click', closeModal);
@@ -980,131 +1174,229 @@
                     closeModal();
                 }
             });
-            aiResetBtn.addEventListener('click', () => {
+aiResetBtn.addEventListener('click', () => {
                 aiForm.classList.remove('hidden');
                 aiResult.classList.add('hidden');
                 aiRecommendation.innerHTML = '';
             });
-
-            getSuggestionBtn.addEventListener('click', async () => {
+getSuggestionBtn.addEventListener('click', async () => {
                 const goal = document.getElementById('investment-goal').value;
                 const risk = document.getElementById('risk-tolerance').value;
 
                 if (!goal) {
                     alert('Please enter your investment goal.');
-                    return;
+                
+            return;
                 }
 
                 // Show loader and hide form
                 aiForm.classList.add('hidden');
                 aiResult.classList.remove('hidden');
                 aiLoader.classList.remove('hidden');
-                aiRecommendation.innerHTML = '';
+           
+             aiRecommendation.innerHTML = '';
 
                 // Scrape plan details from the page
                 let planDetails = '';
                 document.querySelectorAll('[data-plan-name]').forEach(plan => {
                     planDetails += `- **${plan.dataset.planName}:** ${plan.dataset.planDetails}\n`;
-                });
+          
+              });
 
-                const prompt = `You are a helpful financial assistant for Re-Arth Consultancy. A potential client needs a recommendation for an investment plan.
-
-                Client's details:
-                - Investment Goal: "${goal}"
-                - Risk Tolerance: "${risk}"
+                const prompt = \`You are a helpful financial assistant for Re-Arth Consultancy. A potential client needs a recommendation for an investment plan.
+Client's details:
+                - Investment Goal: "\${goal}"
+                - Risk Tolerance: "\${risk}"
 
                 Here are the available plans:
-                ${planDetails}
+                \${planDetails}
 
-                Based on the client's details, which plan would you recommend? Your response must be in the following format and only include this format, with no extra text before or after:
+                Based on the client's details, which plan would you 
+recommend? Your response must be in the following format and only include this format, with no extra text before or after:
                 **Recommended Plan:** [Name of the Plan]
-                **Reasoning:** [A concise, 2-3 sentence explanation of why this plan is a good fit for the client. Be encouraging and professional.]`;
+                **Reasoning:** [A concise, 2-3 sentence explanation of why this plan is a good fit for the client.
+Be encouraging and professional.]\`;
 
                 try {
-                    const apiKey = "AIzaSyDxRr-wlJG8skgMp_Kkrgaj-ajnSsQaS90"; 
-                    const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
-
-                    const response = await fetch(apiUrl, {
+                    const apiKey = "AIzaSyDxRr-wlJG8skgMp_Kkrgaj-ajnSsQaS90";
+// API key is handled by the environment
+                    const apiUrl = \`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=\${apiKey}\`;
+const response = await fetch(apiUrl, {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] })
+        
                     });
-
-                    if (!response.ok) {
+if (!response.ok) {
                         throw new Error('Network response was not ok.');
-                    }
+}
 
                     const result = await response.json();
-                    const text = result.candidates[0].content.parts[0].text;
+const text = result.candidates[0].content.parts[0].text;
                     
                     const recommendedPlan = text.split('**Recommended Plan:**')[1].split('**Reasoning:**')[0].trim();
                     const reasoning = text.split('**Reasoning:**')[1].trim();
-                    
-                    aiRecommendation.innerHTML = `
+aiRecommendation.innerHTML = \`
                         <p class="text-gray-600 mb-2">Based on your details, we recommend:</p>
-                        <h4 class="text-2xl font-bold text-teal-600 mb-4">${recommendedPlan}</h4>
-                        <p class="text-gray-700 bg-teal-50 p-4 rounded-lg border border-teal-200">${reasoning}</p>
-                    `;
-
-                } catch (error) {
+                        <h4 class="text-2xl font-bold text-teal-600 mb-4">\${recommendedPlan}</h4>
+                        <p class="text-gray-700 bg-teal-50 p-4 rounded-lg border border-teal-200">\${reasoning}</p>
+         
+                   \`;
+} catch (error) {
                     console.error("Error calling Gemini API:", error);
-                    aiRecommendation.innerHTML = '<p class="text-red-500">Sorry, we couldn\'t get a recommendation at this time. Please try again later.</p>';
-                } finally {
+aiRecommendation.innerHTML = '<p class="text-red-500">Sorry, we couldn\\'t get a recommendation at this time. Please try again later.</p>';
+} finally {
                     aiLoader.classList.add('hidden');
-                }
+}
             });
-
-
-            // --- Market Insights Logic ---
+// --- Market Insights Logic ---
             const generateInsightsBtn = document.getElementById('generate-insights-btn');
-            const insightsResultContainer = document.getElementById('insights-result-container');
+const insightsResultContainer = document.getElementById('insights-result-container');
             const insightsLoader = document.getElementById('insights-loader');
             const insightsContent = document.getElementById('insights-content');
-
-            generateInsightsBtn.addEventListener('click', async () => {
+generateInsightsBtn.addEventListener('click', async () => {
                 insightsResultContainer.classList.remove('hidden');
                 insightsLoader.classList.remove('hidden');
                 insightsContent.innerHTML = '';
 
-                const prompt = "Act as a financial analyst for the Indian market. Provide a brief, easy-to-understand market snapshot for today. Your audience is potential investors who are not experts. Include: 1. A quick summary of NIFTY 50 and BSE SENSEX performance. 2. Mention one or two sectors that are currently in focus (e.g., IT, banking, auto). 3. A concluding sentence on the general investor sentiment (e.g., cautious, optimistic). Keep the entire response to a single, concise paragraph and make it engaging.";
+                const prompt = "Act as a financial analyst for the Indian market. Provide a brief, easy-to-understand market snapshot for today. Your audience is potential investors who are not experts. Include: 
+1. A quick summary of NIFTY 50 and BSE SENSEX performance. 2. Mention one or two sectors that are currently in focus (e.g., IT, banking, auto). 3. A concluding sentence on the general investor sentiment (e.g., cautious, optimistic). Keep the entire response to a single, concise paragraph and make it engaging.";
 
                 try {
-                    const apiKey = "AIzaSyDxRr-wlJG8skgMp_Kkrgaj-ajnSsQaS90"; 
-                    const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
-                    
-                    const payload = {
+                    const apiKey = "AIzaSyDxRr-wlJG8skgMp_Kkrgaj-ajnSsQaS90"; // API key is handled by the environment
+  
+                          const apiUrl = \`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=\${apiKey}\`;
+const payload = {
                         contents: [{ parts: [{ text: prompt }] }],
                         tools: [{ "google_search": {} }], // Enable Google Search for real-time data
                     };
-
-                    const response = await fetch(apiUrl, {
+const response = await fetch(apiUrl, {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify(payload)
-                    });
+                 
+           });
 
                     if (!response.ok) {
-                        throw new Error(`Network response was not ok. Status: ${response.status}`);
-                    }
+                        throw new Error(\`Network response was not ok. Status: \${response.status}\`);
+}
 
                     const result = await response.json();
-                    
-                    if (result.candidates && result.candidates[0].content) {
+if (result.candidates && result.candidates[0].content) {
                         const text = result.candidates[0].content.parts[0].text;
-                        insightsContent.innerHTML = `<p class="text-gray-700">${text.replace(/\n/g, '<br>')}</p>`;
+insightsContent.innerHTML = \`<p class="text-gray-700">\${text.replace(/\\n/g, '<br>')}</p>\`;
                     } else {
                         throw new Error('Invalid response structure from API.');
-                    }
+}
 
                 } catch (error) {
                     console.error("Error calling Gemini API for insights:", error);
-                    insightsContent.innerHTML = '<p class="text-red-500 text-center">Sorry, we couldn\'t generate market insights at this time. Please try again later.</p>';
-                } finally {
+insightsContent.innerHTML = '<p class="text-red-500 text-center">Sorry, we couldn\\'t generate market insights at this time. Please try again later.</p>';
+} finally {
                     insightsLoader.classList.add('hidden');
-                }
+}
             });
+// Investment Calculator Logic
+            const investmentSlider = document.getElementById('investment-slider');
+const returnSlider = document.getElementById('return-slider');
+            const timeSlider = document.getElementById('time-slider');
+            
+            const investmentInput = document.getElementById('investment-input');
+            const returnInput = document.getElementById('return-input');
+            const timeInput = document.getElementById('time-input');
+const monthlyReturnDisplay = document.getElementById('monthly-return');
+            const totalReturnDisplay = document.getElementById('total-return');
+            const totalAmountDisplay = document.getElementById('total-amount');
+const formatCurrency = (num) => {
+                return new Intl.NumberFormat('en-IN', {
+                    style: 'currency',
+                    currency: 'INR',
+                    minimumFractionDigits: 0,
+             
+               maximumFractionDigits: 0,
+                }).format(num);
+};
+
+             const parseValue = (str) => {
+                return parseFloat(str.replace(/[^0-9.]/g, '')) ||
+0;
+            };
+            
+            let currentTotalAmount = 0;
+
+            const calculateAndDisplay = () => {
+                const investment = parseFloat(investmentSlider.value);
+const monthlyRate = parseFloat(returnSlider.value) / 100;
+                const duration = parseInt(timeSlider.value);
+
+                const monthlyReturn = investment * monthlyRate;
+const totalReturn = monthlyReturn * duration;
+                const totalAmount = investment + totalReturn;
+                
+                investmentInput.value = formatCurrency(investment);
+                returnInput.value = \`\${returnSlider.value}%\`;
+timeInput.value = \`\${duration} Month\${duration > 1 ? 's' : ''}\`;
+// Animate counter
+                const animateValue = (element, start, end, duration) => {
+                    let startTimestamp = null;
+const step = (timestamp) => {
+                        if (!startTimestamp) startTimestamp = timestamp;
+const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                        const currentValue = Math.floor(progress * (end - start) + start);
+element.innerText = formatCurrency(currentValue);
+                        if (progress < 1) {
+                            window.requestAnimationFrame(step);
+} else {
+                            element.innerText = formatCurrency(end);
+// Ensure it ends on the exact value
+                        }
+                    };
+window.requestAnimationFrame(step);
+                };
+                
+                // Animate only the final total amount for a cleaner effect
+                animateValue(totalAmountDisplay, parseValue(totalAmountDisplay.innerText), totalAmount, 500);
+// Update other fields directly
+                monthlyReturnDisplay.innerText = formatCurrency(monthlyReturn);
+totalReturnDisplay.innerText = formatCurrency(totalReturn);
+            };
+
+            const syncInputToSlider = (input, slider) => {
+                let value = parseValue(input.value);
+const min = parseFloat(slider.min);
+                const max = parseFloat(slider.max);
+
+                if (value < min) value = min;
+if (value > max) value = max;
+                
+                slider.value = value;
+                calculateAndDisplay();
+            };
+// Event listeners for sliders
+            [investmentSlider, returnSlider, timeSlider].forEach(slider => {
+                slider.addEventListener('input', calculateAndDisplay);
+            });
+// Event listeners for inputs
+            investmentInput.addEventListener('blur', () => syncInputToSlider(investmentInput, investmentSlider));
+returnInput.addEventListener('blur', () => syncInputToSlider(returnInput, returnSlider));
+            timeInput.addEventListener('blur', () => syncInputToSlider(timeInput, timeSlider));
+[investmentInput, returnInput, timeInput].forEach(input => {
+                input.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter') {
+                        e.target.blur();
+                    }
+         
+               });
+                // When user focuses, show the raw number for editing
+                input.addEventListener('focus', (e) => {
+                    e.target.value = parseValue(e.target.value);
+                });
+           
+         });
 
 
+            // Initial calculation
+            calculateAndDisplay();
         });
 
     </script>
