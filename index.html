@@ -864,7 +864,7 @@ Transparent, effective, and tailored to my future goals. Thank you, Re-Arth!"</p
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold mb-4 reveal">Get in Touch</h2>
                 <p class="text-gray-600 max-w-3xl mx-auto reveal" style="transition-delay: 0.2s;">We're here to help.
-Reach out to us for any queries or to book a consultation.</p>
+Reach out to us for any queries or to to book a consultation.</p>
             </div>
             <div class="grid md:grid-cols-2 gap-12">
                 <div class="reveal">
@@ -912,7 +912,7 @@ allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" cl
                 
                 <a href="#services" class="hover:text-teal-400 transition">Services</a>
                 <a href="#plans" class="hover:text-teal-400 transition">Plans</a>
-                <a href="#contact" class="hover:text-teal-400 transition">Contact</a>
+                <a href="#contact" class="hover:text-teal-4D00 transition">Contact</a>
                 <a href="privacy-policy.html" class="hover:text-teal-400 transition">Privacy Policy</a>
             </nav>
             <p class="text-gray-400">©
@@ -968,40 +968,40 @@ Over</button>
 
     <script>
         
-          document.addEventListener('DOMContentLoaded', () => {
+          // *** FIX: Changed from DOMContentLoaded to window.onload ***
+          window.addEventListener('load', () => {
              // Preloader logic: Fade out and then remove
              const preloader = document.getElementById('preloader');
-if (preloader) {
+            if (preloader) {
                  // Start the fade out transition
                  preloader.style.opacity = '0';
-// After the transition completes (500ms), set display to none
+                // After the transition completes (500ms), set display to none
                  setTimeout(() => {
                      if (preloader) {
                          preloader.style.display = 'none';
                      }
-    
                  }, 500);
-}
+            }
 
              // Sticky Navigation
              const navContainer = document.getElementById('nav-container');
-if (navContainer) {
+            if (navContainer) {
                   window.addEventListener('scroll', () => {
                        if (window.scrollY > 50) {
                            navContainer.classList.add('bg-white/50', 'max-w-4xl', 'rounded-2xl', 'border', 'border-gray-200', 'backdrop-blur-lg', 'shadow-md');
                            
-navContainer.classList.remove('max-w-6xl');
+    navContainer.classList.remove('max-w-6xl');
                        } else {
                            navContainer.classList.remove('bg-white/50', 'max-w-4xl', 'rounded-2xl', 'border', 'border-gray-200', 'backdrop-blur-lg', 'shadow-md');
                            navContainer.classList.add('max-w-6xl');
                        }
     
                    });
-}
+            }
 
              // Intersection Observer for reveal animations
              const revealElements = document.querySelectorAll('.reveal');
-const revealObserver = new IntersectionObserver((entries) => {
+            const revealObserver = new IntersectionObserver((entries) => {
                  entries.forEach(entry => {
                      if (entry.isIntersecting) {
                          entry.target.classList.add('visible');
@@ -1009,31 +1009,31 @@ const revealObserver = new IntersectionObserver((entries) => {
                 
                  });
              }, { threshold: 0.1 });
-revealElements.forEach(el => {
+            revealElements.forEach(el => {
                  revealObserver.observe(el);
              });
-// Counter animation
+            // Counter animation
              const counters = document.querySelectorAll('.counter');
-const speed = 200; // The lower the slower
+            const speed = 200; // The lower the slower
              
              const animateCounter = (counter) => {
                  const target = +counter.getAttribute('data-target');
-let count = 0;
+                let count = 0;
 
                  const updateCount = () => {
                      const increment = target / speed;
-count += increment;
+                    count += increment;
 
                      if (count < target) {
                          counter.innerText = Math.ceil(count);
-setTimeout(updateCount, 10);
+                        setTimeout(updateCount, 10);
                      } else {
                          counter.innerText = target + (counter.innerText.includes('%') ? '%' : '+');
-}
+                    }
                  };
                  updateCount();
              };
-const counterObserver = new IntersectionObserver((entries, observer) => {
+            const counterObserver = new IntersectionObserver((entries, observer) => {
                  entries.forEach(entry => {
                      if (entry.isIntersecting) {
                          animateCounter(entry.target);
@@ -1042,19 +1042,19 @@ const counterObserver = new IntersectionObserver((entries, observer) => {
                      }
                  });
              }, { threshold: 0.5 });
-counters.forEach(counter => {
+            counters.forEach(counter => {
                  counterObserver.observe(counter);
              });
-// Scroll to top button
+            // Scroll to top button
              const scrollTopBtn = document.getElementById('scrollTopBtn');
-window.onscroll = function() {
+            window.onscroll = function() {
                  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
                      scrollTopBtn.style.display = "flex";
-} else {
+                } else {
                      scrollTopBtn.style.display = "none";
-}
+                }
              };
-scrollTopBtn.addEventListener('click', () => {
+            scrollTopBtn.addEventListener('click', () => {
                  const homeElement = document.querySelector('#home');
                  if (homeElement) {
                      window.scrollTo({
@@ -1064,21 +1064,21 @@ scrollTopBtn.addEventListener('click', () => {
                      });
                  }
              });
-// Corrected Mobile Menu Logic
+            // Corrected Mobile Menu Logic
              const mobileMenuButton = document.getElementById('mobile-menu-button');
-const mobileMenuContent = document.getElementById('mobile-menu-content');
+            const mobileMenuContent = document.getElementById('mobile-menu-content');
              const hamburgerIcon = document.getElementById('hamburger-icon');
              const closeIcon = document.getElementById('close-icon');
-const toggleMenu = () => {
+            const toggleMenu = () => {
                  if(mobileMenuContent && hamburgerIcon && closeIcon) {
                      mobileMenuContent.classList.toggle('hidden');
-hamburgerIcon.classList.toggle('hidden');
+                    hamburgerIcon.classList.toggle('hidden');
                      closeIcon.classList.toggle('hidden');
                  }
              };
-if(mobileMenuButton) {
+            if(mobileMenuButton) {
                  mobileMenuButton.addEventListener('click', toggleMenu);
-}
+            }
 
              // Smooth scrolling for all anchor links
              document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -1108,12 +1108,12 @@ if(mobileMenuButton) {
                              behavior: "smooth"
       
                          });
-}
+                    }
                  });
              });
-// Contact Form Submission
+            // Contact Form Submission
              const contactForm = document.getElementById('contact-form');
-const successMessage = document.getElementById('form-success-message');
+            const successMessage = document.getElementById('form-success-message');
              
              contactForm.addEventListener('submit', (e) => {
                  e.preventDefault();
@@ -1137,27 +1137,27 @@ const successMessage = document.getElementById('form-success-message');
     
                      }, 1000);
              });
-// --- AI Recommender Logic ---
+            // --- AI Recommender Logic ---
              const aiModal = document.getElementById('ai-modal');
-const aiModalContent = document.getElementById('ai-modal-content');
+            const aiModalContent = document.getElementById('ai-modal-content');
              const openAiModalBtn = document.getElementById('ai-recommender-btn');
              const closeAiModalBtn = document.getElementById('close-ai-modal');
              const getSuggestionBtn = document.getElementById('get-suggestion-btn');
              const aiForm = document.getElementById('ai-form');
-const aiResult = document.getElementById('ai-result');
+            const aiResult = document.getElementById('ai-result');
              const aiLoader = document.getElementById('ai-loader');
              const aiRecommendation = document.getElementById('ai-recommendation');
              const aiResetBtn = document.getElementById('ai-reset-btn');
-const openModal = () => {
+            const openModal = () => {
                  aiModal.classList.remove('hidden');
-setTimeout(() => {
+                setTimeout(() => {
                      aiModalContent.classList.remove('scale-95', 'opacity-0');
                  }, 10);
-};
+            };
 
              const closeModal = () => {
                  aiModalContent.classList.add('scale-95', 'opacity-0');
-setTimeout(() => {
+                setTimeout(() => {
                      aiModal.classList.add('hidden');
                      // Reset form for next time
                      aiForm.classList.remove('hidden');
@@ -1165,7 +1165,7 @@ setTimeout(() => {
                      
                      aiRecommendation.innerHTML = '';
                  }, 300);
-};
+            };
 
              openAiModalBtn.addEventListener('click', openModal);
              closeAiModalBtn.addEventListener('click', closeModal);
@@ -1174,12 +1174,12 @@ setTimeout(() => {
                      closeModal();
                  }
              });
-aiResetBtn.addEventListener('click', () => {
+            aiResetBtn.addEventListener('click', () => {
                  aiForm.classList.remove('hidden');
                  aiResult.classList.add('hidden');
                  aiRecommendation.innerHTML = '';
              });
-getSuggestionBtn.addEventListener('click', async () => {
+            getSuggestionBtn.addEventListener('click', async () => {
                  const goal = document.getElementById('investment-goal').value;
                  const risk = document.getElementById('risk-tolerance').value;
 
@@ -1221,40 +1221,40 @@ Be encouraging and professional.]\`;
                      const apiKey = "AIzaSyDxRr-wlJG8skgMp_Kkrgaj-ajnSsQaS90";
 // API key is handled by the environment
                      const apiUrl = \`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=\${apiKey}\`;
-const response = await fetch(apiUrl, {
+                    const response = await fetch(apiUrl, {
                          method: 'POST',
                          headers: { 'Content-Type': 'application/json' },
                          body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] })
           
                      });
-if (!response.ok) {
+                    if (!response.ok) {
                          throw new Error('Network response was not ok.');
-}
+                    }
 
                      const result = await response.json();
-const text = result.candidates[0].content.parts[0].text;
+                    const text = result.candidates[0].content.parts[0].text;
                      
                      const recommendedPlan = text.split('**Recommended Plan:**')[1].split('**Reasoning:**')[0].trim();
                      const reasoning = text.split('**Reasoning:**')[1].trim();
-aiRecommendation.innerHTML = \`
+                    aiRecommendation.innerHTML = \`
                          <p class="text-gray-600 mb-2">Based on your details, we recommend:</p>
                          <h4 class="text-2xl font-bold text-teal-600 mb-4">\${recommendedPlan}</h4>
                          <p class="text-gray-700 bg-teal-50 p-4 rounded-lg border border-teal-200">\${reasoning}</p>
                  
                      \`;
-} catch (error) {
+                } catch (error) {
                      console.error("Error calling Gemini API:", error);
-aiRecommendation.innerHTML = '<p class="text-red-500">Sorry, we couldn\\'t get a recommendation at this time. Please try again later.</p>';
-} finally {
+                    aiRecommendation.innerHTML = '<p class="text-red-500">Sorry, we couldn\\'t get a recommendation at this time. Please try again later.</p>';
+                } finally {
                      aiLoader.classList.add('hidden');
-}
+                }
              });
-// --- Market Insights Logic ---
+            // --- Market Insights Logic ---
              const generateInsightsBtn = document.getElementById('generate-insights-btn');
-const insightsResultContainer = document.getElementById('insights-result-container');
+            const insightsResultContainer = document.getElementById('insights-result-container');
              const insightsLoader = document.getElementById('insights-loader');
              const insightsContent = document.getElementById('insights-content');
-generateInsightsBtn.addEventListener('click', async () => {
+            generateInsightsBtn.addEventListener('click', async () => {
                  insightsResultContainer.classList.remove('hidden');
                  insightsLoader.classList.remove('hidden');
                  insightsContent.innerHTML = '';
@@ -1266,11 +1266,11 @@ generateInsightsBtn.addEventListener('click', async () => {
                      const apiKey = "AIzaSyDxRr-wlJG8skgMp_Kkrgaj-ajnSsQaS90"; // API key is handled by the environment
   
                            const apiUrl = \`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=\${apiKey}\`;
-const payload = {
+                    const payload = {
                          contents: [{ parts: [{ text: prompt }] }],
                          tools: [{ "google_search": {} }], // Enable Google Search for real-time data
                      };
-const response = await fetch(apiUrl, {
+                    const response = await fetch(apiUrl, {
                          method: 'POST',
                          headers: { 'Content-Type': 'application/json' },
                          body: JSON.stringify(payload)
@@ -1279,35 +1279,35 @@ const response = await fetch(apiUrl, {
 
                      if (!response.ok) {
                          throw new Error(\`Network response was not ok. Status: \${response.status}\`);
-}
+                    }
 
                      const result = await response.json();
-if (result.candidates && result.candidates[0].content) {
+                    if (result.candidates && result.candidates[0].content) {
                          const text = result.candidates[0].content.parts[0].text;
-insightsContent.innerHTML = \`<p class="text-gray-700">\${text.replace(/\\n/g, '<br>')}</p>\`;
+                        insightsContent.innerHTML = \`<p class="text-gray-700">\${text.replace(/\\n/g, '<br>')}</p>\`;
                      } else {
                          throw new Error('Invalid response structure from API.');
-}
+                    }
 
                  } catch (error) {
                      console.error("Error calling Gemini API for insights:", error);
-insightsContent.innerHTML = '<p class="text-red-500 text-center">Sorry, we couldn't generate market insights at this time. Please try again later.</p>';
-} finally {
+                    insightsContent.innerHTML = '<p class="text-red-500 text-center">Sorry, we couldn\'t generate market insights at this time. Please try again later.</p>';
+                } finally {
                      insightsLoader.classList.add('hidden');
-}
+                }
              });
-// Investment Calculator Logic
+            // Investment Calculator Logic
              const investmentSlider = document.getElementById('investment-slider');
-const returnSlider = document.getElementById('return-slider');
+            const returnSlider = document.getElementById('return-slider');
              const timeSlider = document.getElementById('time-slider');
              
              const investmentInput = document.getElementById('investment-input');
              const returnInput = document.getElementById('return-input');
              const timeInput = document.getElementById('time-input');
-const monthlyReturnDisplay = document.getElementById('monthly-return');
+            const monthlyReturnDisplay = document.getElementById('monthly-return');
              const totalReturnDisplay = document.getElementById('total-return');
              const totalAmountDisplay = document.getElementById('total-amount');
-const formatCurrency = (num) => {
+            const formatCurrency = (num) => {
                  return new Intl.NumberFormat('en-IN', {
                      style: 'currency',
                      currency: 'INR',
@@ -1315,7 +1315,7 @@ const formatCurrency = (num) => {
                      
                      maximumFractionDigits: 0,
                  }).format(num);
-};
+            };
 
                const parseValue = (str) => {
                  return parseFloat(str.replace(/[^0-9.]/g, '')) ||
@@ -1326,61 +1326,61 @@ const formatCurrency = (num) => {
 
              const calculateAndDisplay = () => {
                  const investment = parseFloat(investmentSlider.value);
-const monthlyRate = parseFloat(returnSlider.value) / 100;
+                const monthlyRate = parseFloat(returnSlider.value) / 100;
                  const duration = parseInt(timeSlider.value);
 
                  const monthlyReturn = investment * monthlyRate;
-const totalReturn = monthlyReturn * duration;
+                const totalReturn = monthlyReturn * duration;
                  const totalAmount = investment + totalReturn;
                  
                  investmentInput.value = formatCurrency(investment);
                  returnInput.value = \`\${returnSlider.value}%\`;
-timeInput.value = \`\${duration} Month\${duration > 1 ? 's' : ''}\`;
-// Animate counter
+                timeInput.value = \`\${duration} Month\${duration > 1 ? 's' : ''}\`;
+                // Animate counter
                  const animateValue = (element, start, end, duration) => {
                      let startTimestamp = null;
-const step = (timestamp) => {
+                    const step = (timestamp) => {
                          if (!startTimestamp) startTimestamp = timestamp;
-const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                        const progress = Math.min((timestamp - startTimestamp) / duration, 1);
                          const currentValue = Math.floor(progress * (end - start) + start);
-element.innerText = formatCurrency(currentValue);
+                        element.innerText = formatCurrency(currentValue);
                          if (progress < 1) {
                              window.requestAnimationFrame(step);
-} else {
+                        } else {
                              element.innerText = formatCurrency(end);
-// Ensure it ends on the exact value
+                            // Ensure it ends on the exact value
                          }
                      };
-window.requestAnimationFrame(step);
+                    window.requestAnimationFrame(step);
                  };
                  
                  // Animate only the final total amount for a cleaner effect
                  animateValue(totalAmountDisplay, parseValue(totalAmountDisplay.innerText), totalAmount, 500);
-// Update other fields directly
+                // Update other fields directly
                  monthlyReturnDisplay.innerText = formatCurrency(monthlyReturn);
-totalReturnDisplay.innerText = formatCurrency(totalReturn);
+                totalReturnDisplay.innerText = formatCurrency(totalReturn);
              };
 
              const syncInputToSlider = (input, slider) => {
                  let value = parseValue(input.value);
-const min = parseFloat(slider.min);
+                const min = parseFloat(slider.min);
                  const max = parseFloat(slider.max);
 
                  if (value < min) value = min;
-if (value > max) value = max;
+                if (value > max) value = max;
                  
                  slider.value = value;
                  calculateAndDisplay();
              };
-// Event listeners for sliders
+            // Event listeners for sliders
              [investmentSlider, returnSlider, timeSlider].forEach(slider => {
                  slider.addEventListener('input', calculateAndDisplay);
              });
-// Event listeners for inputs
+            // Event listeners for inputs
              investmentInput.addEventListener('blur', () => syncInputToSlider(investmentInput, investmentSlider));
-returnInput.addEventListener('blur', () => syncInputToSlider(returnInput, returnSlider));
+            returnInput.addEventListener('blur', () => syncInputToSlider(returnInput, returnSlider));
              timeInput.addEventListener('blur', () => syncInputToSlider(timeInput, timeSlider));
-[investmentInput, returnInput, timeInput].forEach(input => {
+            [investmentInput, returnInput, timeInput].forEach(input => {
                  input.addEventListener('keydown', (e) => {
                      if (e.key === 'Enter') {
                          e.target.blur();
